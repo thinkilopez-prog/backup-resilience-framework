@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora AHP - Resiliencia Digital</title>
+    <!-- Tailwind para el diseño visual -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Vue.js para la lógica interactiva -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- FontAwesome para íconos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans p-6">
+    <div id="app" class="max-w-6xl mx-auto space-y-6">
+        
+        <!-- Encabezado -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 flex items-center justify-between">
+            <div>
+                <h1 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
+                    <i class="fa-solid fa-calculator text-blue-600"></i>
+                    Calculadora AHP - Resiliencia Digital
+                </h1>
+                <p class="text-slate-500 mt-1 text-sm">
+                    Modelo paramétrico basado en Proceso Analítico Jerárquico para priorización de inversiones.
+                </p>
+            </div>
+            <button @click="calculateAHP" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg font-medium shadow-sm transition-colors flex items-center gap-2">
+                <i class="fa-solid fa-chart-simple"></i> Calcular Prioridad
+            </button>
+        </div>
+
+        <!-- Pestañas de Navegación -->
+        <div class="flex border-b border-slate-200 gap-6">
+            <button @click="activeTab = 'config'" :class="['pb-3 font-medium text-sm transition-colors border-b-2', activeTab === 'config' ? 'border-blue-600 text-blue-600' : 'border-transparent text-slate-500 hover:text-slate-800']">
+                <i class="fa-solid fa-gear mr-2"></i> 1. Configuración Base
+            </button>
+            <button @click="activeTab = 'matrices'" :class="['pb-3 font-medium text-sm transition-colors border-b-2', activeTab === 'matrices' ? 'border-blue-600 text-blue-600' : 'border-transparent text-slate-500 hover:text-slate-800']">
+                <i class="fa-solid fa-sliders mr-2"></i> 2. Comparación por Pares
+            </button>
+            <button @click="activeTab = 'results'" :class="['pb-3 font-medium text-sm transition-colors border-b-2', activeTab === 'results' ? 'border-blue-600 text-blue-600' : 'border-transparent text-slate-500 hover:text-slate-800']">
+                <i class="fa-solid fa-chart-pie mr-2"></i> 3. Resultados y Síntesis
+            </button>
+        </div>
+
+        <!-- PESTAÑA 1: Configuración -->
+        <div v-if="activeTab === 'config'" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Criterios -->
+            <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-lg font-bold text-slate-800">Criterios de Evaluación</h2>
+                    <div class="space-x-2">
+                        <button @click="removeCriterion" class="text-slate-400 hover:text-red-500 font-bold px-2">-</button>
+                        <button @click="addCriterion" class="text-slate-400 hover:text-blue-600 font-bold px-2">+</button>
+                    </div>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex gap-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">
+                        <span class="flex-1">Nombre del Criterio</span>
+                        <span class="w-24 text-right">Peso (%)</span>
+                    </div>
+                    <div v-for="(crit, idx) in criteria" :key="'crit'+idx" class="flex gap-4 items-center">
+                        <input type="text" v-model="crit.name" class="flex-1 bg-slate-50 border border-slate-200 rounded p-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none">
+                        <input type="number" v-model.number="crit.weight" class="w-24 bg-slate-50 border border-slate-200 rounded p-2 text-sm text-right focus:ring-2 focus:ring-blue-500 outline-none">
+                    </div>
+                    <div :class="['text-sm text-right font-medium p-2 mt-2 rounded', isValidWeights ? 'text-green-600 bg-green-50' : 'text-red-600 bg-red-50']">
+                        Suma total: {{ weightsSum }}% <span v-if="!isValidWeights">(Debe ser 100%)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alternativas (Apps) -->
+            <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-lg font-bold text-slate-800">Alternativas (Aplicaciones)</h2>
+                    <div class="space-x-2">
+                        <button @click="removeApp" class="text-slate-400 hover:text-red-500 font-bold px-2">-</button>
+                        <button @click="addApp" class="text-slate-400 hover:text-blue-600 font-bold px-2">+</button>
+                    </div>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex gap-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">
+                        <span class="flex-1">Nombre Alternativa</span>
+                        <span class="w-32 text-right">Cumplimiento (%)</span>
+                    </div>
+                    <div v-for="(app, idx) in apps" :key="'app'+idx" class="flex gap-4 items-center">
+                        <input type="text" v-model="app.name" class="flex-1 bg-slate-50 border border-slate-200 rounded p-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none">
+                        <input type="number" min="1" max="100" v-model.number="app.compliance" class="w-32 bg-slate-50 border border-slate-200 rounded p-2 text-sm text-right focus:ring-2 focus:ring-blue-500 outline-none">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PESTAÑA 2: Matrices de Comparación -->
+        <div v-if="activeTab === 'matrices'" class="space-y-6">
+            <div class="bg-blue-50 text-blue-800 p-4 rounded-lg flex items-start gap-3 border border-blue-100">
+                <i class="fa-solid fa-circle-info mt-1"></i>
+                <div class="text-sm">
+                    <strong>Escala de Saaty:</strong> Evalúa qué alternativa es preferida sobre la otra con respecto a cada criterio. Si App A es Fuertemente preferida sobre App B, selecciona '5'. Las inversas se calculan automáticamente.
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div v-for="(crit, cIdx) in criteria" :key="'matrix'+cIdx" class="bg-white rounded-xl shadow-sm border border-slate-200 p-5">
+                    <h3 class="font-bold text-slate-800 mb-4 border-b pb-2">{{ crit.name }}</h3>
+                    <div class="space-y-4">
+                        <template v-for="(appA, i) in apps">
+                            <template v-for="(appB, j) in apps">
+                                <div v-if="i < j" :key="cIdx+'_'+i+'_'+j" class="flex flex-col gap-1">
+                                    <label class="text-xs font-semibold text-slate-500">
+                                        {{ appA.name }} <span class="text-slate-300 mx-1">vs</span> {{ appB.name }}
+                                    </label>
+                                    <select :value="getComparison(cIdx, i, j)" @change="setComparison(cIdx, i, j, $event.target.value)" class="bg-slate-50 border border-slate-200 text-sm rounded p-2 outline-none focus:ring-2 focus:ring-blue-500">
+                                        <option v-for="opt in saatyOptions" :key="opt.value" :value="opt.value">
+                                            {{ formatSaatyLabel(opt.label, appA.name, appB.name) }}
+                                        </option>
+                                    </select>
+                                </div>
+                            </template>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PESTAÑA 3: Resultados -->
+        <div v-if="activeTab === 'results' && results" class="space-y-6">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div v-for="(app, i) in apps" :key="'res'+i" :class="['relative rounded-xl p-6 border', isWinner(i) ? 'bg-blue-600 border-blue-700 text-white shadow-lg' : 'bg-white border-slate-200 text-slate-800 shadow-sm']">
+                    <div v-if="isWinner(i)" class="absolute top-4 right-4 bg-white/20 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide flex items-center gap-1">
+                        <i class="fa-solid fa-circle-check"></i> Prioridad Alta
+                    </div>
+                    <h3 class="text-xl font-bold mb-1">{{ app.name }}</h3>
+                    <p :class="['text-sm mb-4', isWinner(i) ? 'text-blue-100' : 'text-slate-500']">Puntaje Dinámico Final</p>
+                    <div class="text-4xl font-black mb-4">
+                        {{ formatNum(results.finalScores[i]) }}
+                    </div>
+                    <div class="space-y-2 text-sm mt-6 border-t pt-4 border-white/20">
+                        <div class="flex justify-between">
+                            <span class="opacity-80">Puntaje Base (Suma Ponderada)</span>
+                            <span class="font-semibold">{{ formatNum(results.globalScores[i]) }}</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="opacity-80">Cumplimiento Operativo</span>
+                            <span class="font-semibold">{{ app.compliance }}%</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="opacity-80">Riesgo (1 / Cumplimiento)</span>
+                            <span class="font-semibold">{{ formatNum(1 / (app.compliance / 100)) }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ratio de Inversión (Solo si son 2 apps) -->
+            <div v-if="apps.length === 2" class="bg-slate-800 text-white rounded-xl p-6 flex items-center justify-between">
+                <div>
+                    <h4 class="font-bold text-lg">Ratio Final de Inversión</h4>
+                    <p class="text-slate-300 text-sm mt-1">Conclusión algorítmica derivada del modelo AHP.</p>
+                </div>
+                <div class="text-xl font-mono bg-slate-900 px-4 py-2 rounded-lg border border-slate-700">
+                    {{ ratioText }}
+                </div>
+            </div>
+
+            <!-- Tabla de Eigenvectors -->
+            <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="p-6 border-b border-slate-100 bg-slate-50">
+                    <h3 class="font-bold text-slate-800">Desglose de Vectores Locales (Eigenvectors)</h3>
+                    <p class="text-sm text-slate-500">Resultados de las matrices normalizadas y verificación de consistencia por criterio.</p>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm text-left">
+                        <thead class="bg-slate-50 text-slate-500 border-b uppercase text-xs">
+                            <tr>
+                                <th class="px-6 py-4 font-semibold">Criterio</th>
+                                <th class="px-6 py-4 font-semibold">Peso Base</th>
+                                <th v-for="app in apps" :key="'th'+app.id" class="px-6 py-4 font-semibold text-right">Pri. {{ app.name }}</th>
+                                <th class="px-6 py-4 font-semibold text-right">CR (Error)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100">
+                            <tr v-for="(crit, cIdx) in criteria" :key="'tr'+cIdx" class="hover:bg-slate-50 transition-colors">
+                                <td class="px-6 py-4 font-medium text-slate-800">{{ crit.name }}</td>
+                                <td class="px-6 py-4 text-slate-500">{{ crit.weight }}%</td>
+                                <td v-for="(app, i) in apps" :key="'td'+i" class="px-6 py-4 text-right font-mono text-slate-600">
+                                    {{ formatNum(results.localPriorities[cIdx][i]) }}
+                                </td>
+                                <td class="px-6 py-4 text-right">
+                                    <span :class="['inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold', results.consistencies[cIdx].cr <= 0.1 ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700']">
+                                        <i v-if="results.consistencies[cIdx].cr > 0.1" class="fa-solid fa-triangle-exclamation"></i>
+                                        {{ (results.consistencies[cIdx].cr * 100).toFixed(1) }}%
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Lógica de Vue.js -->
+    <script>
+        const { createApp } = Vue;
+
+        createApp({
+            data() {
+                return {
+                    activeTab: 'config',
+                    apps: [
+                        { id: 0, name: 'App 1', compliance: 80 },
+                        { id: 1, name: 'App 2', compliance: 40 }
+                    ],
+                    criteria: [
+                        { id: 0, name: 'Regulatorio', weight: 15 },
+                        { id: 1, name: 'Recuperación', weight: 15 },
+                        { id: 2, name: 'Tecnología', weight: 30 },
+                        { id: 3, name: 'Costo', weight: 15 },
+                        { id: 4, name: 'Personas', weight: 15 },
+                        { id: 5, name: 'Infraestructura', weight: 10 }
+                    ],
+                    // Datos pre-cargados de tu anexo
+                    comparisons: {
+                        '0_0_1': '1',
+                        '1_0_1': '1/7',
+                        '2_0_1': '1/5',
+                        '3_0_1': '5',
+                        '4_0_1': '5',
+                        '5_0_1': '7'
+                    },
+                    results: null,
+                    saatyOptions: [
+                        { value: '9', label: 'Extremadamente Preferida (9)' },
+                        { value: '8', label: 'Muy Fuerte a Extrema (8)' },
+                        { value: '7', label: 'Muy Fuertemente Preferida (7)' },
+                        { value: '6', label: 'Fuerte a Muy Fuerte (6)' },
+                        { value: '5', label: 'Fuertemente Preferida (5)' },
+                        { value: '4', label: 'Moderada a Fuerte (4)' },
+                        { value: '3', label: 'Moderadamente Preferida (3)' },
+                        { value: '2', label: 'Igual a Moderada (2)' },
+                        { value: '1', label: 'Igualmente Preferidas (1)' },
+                        { value: '1/2', label: 'Leve desventaja (1/2)' },
+                        { value: '1/3', label: 'Moderada desventaja (1/3)' },
+                        { value: '1/4', label: 'Desventaja moderada-fuerte (1/4)' },
+                        { value: '1/5', label: 'Fuerte desventaja (1/5)' },
+                        { value: '1/6', label: 'Desventaja fuerte-muy fuerte (1/6)' },
+                        { value: '1/7', label: 'Muy fuerte desventaja (1/7)' },
+                        { value: '1/8', label: 'Desventaja casi extrema (1/8)' },
+                        { value: '1/9', label: 'Extrema desventaja (1/9)' }
+                    ]
+                }
+            },
+            computed: {
+                weightsSum() {
+                    return this.criteria.reduce((sum, c) => sum + Number(c.weight), 0);
+                },
+                isValidWeights() {
+                    return Math.abs(this.weightsSum - 100) < 0.1;
+                },
+                ratioText() {
+                    if (!this.results || this.apps.length !== 2) return '';
+                    const s1 = this.results.finalScores[0];
+                    const s2 = this.results.finalScores[1];
+                    if (s1 > s2) return `${this.apps[0].name} es ${this.formatNum(s1/s2)}x más crítica`;
+                    return `${this.apps[1].name} es ${this.formatNum(s2/s1)}x más crítica`;
+                }
+            },
+            methods: {
+                addApp() { this.apps.push({ id: this.apps.length, name: `App ${this.apps.length + 1}`, compliance: 50 }); },
+                removeApp() { if(this.apps.length > 2) this.apps.pop(); },
+                addCriterion() { this.criteria.push({ id: this.criteria.length, name: `Criterio ${this.criteria.length + 1}`, weight: 10 }); },
+                removeCriterion() { if(this.criteria.length > 1) this.criteria.pop(); },
+                
+                getComparison(cIdx, i, j) {
+                    return this.comparisons[`${cIdx}_${i}_${j}`] || '1';
+                },
+                setComparison(cIdx, i, j, value) {
+                    this.comparisons[`${cIdx}_${i}_${j}`] = value;
+                },
+                
+                formatSaatyLabel(label, appA, appB) {
+                    if(label.includes('desventaja')) return label + ` para ${appA} (Gana ${appB})`;
+                    if(label.includes('Igualmente')) return label;
+                    return label + ` para ${appA}`;
+                },
+                
+                parseSaaty(valStr) {
+                    const str = String(valStr);
+                    if (str.includes('/')) {
+                        const [num, den] = str.split('/');
+                        return parseFloat(num) / parseFloat(den);
+                    }
+                    return parseFloat(str);
+                },
+                formatNum(num) {
+                    return Number(num).toFixed(4);
+                },
+                isWinner(index) {
+                    if (!this.results) return false;
+                    const maxScore = Math.max(...this.results.finalScores);
+                    return this.results.finalScores[index] === maxScore;
+                },
+
+                calculateAHP() {
+                    const n = this.apps.length;
+                    let localPriorities = [];
+                    let consistencies = [];
+                    let globalScores = new Array(n).fill(0);
+                    const RI_VALUES = [0, 0, 0, 0.58, 0.9, 1.12, 1.24, 1.32, 1.41, 1.45, 1.49];
+
+                    const totalWeight = this.criteria.reduce((sum, c) => sum + Number(c.weight), 0);
+
+                    this.criteria.forEach((crit, cIdx) => {
+                        // 1. Matriz de comparación
+                        let matrix = Array(n).fill(0).map(() => Array(n).fill(1));
+                        for (let i = 0; i < n; i++) {
+                            for (let j = i + 1; j < n; j++) {
+                                const valStr = this.getComparison(cIdx, i, j);
+                                const val = this.parseSaaty(valStr);
+                                matrix[i][j] = val;
+                                matrix[j][i] = 1 / val;
+                            }
+                        }
+
+                        // 2. Suma de Columnas
+                        let colSums = Array(n).fill(0);
+                        for (let j = 0; j < n; j++) {
+                            for (let i = 0; i < n; i++) colSums[j] += matrix[i][j];
+                        }
+
+                        // 3. Vector de Prioridad
+                        let priorityVector = Array(n).fill(0);
+                        for (let i = 0; i < n; i++) {
+                            let rowSum = 0;
+                            for (let j = 0; j < n; j++) {
+                                rowSum += matrix[i][j] / colSums[j];
+                            }
+                            priorityVector[i] = rowSum / n;
+                        }
+                        localPriorities.push(priorityVector);
+
+                        // 4. Consistencia
+                        let aw = Array(n).fill(0);
+                        for (let i = 0; i < n; i++) {
+                            for (let j = 0; j < n; j++) aw[i] += matrix[i][j] * priorityVector[j];
+                        }
+                        let lambdaMax = 0;
+                        for (let i = 0; i < n; i++) lambdaMax += (aw[i] / priorityVector[i]);
+                        lambdaMax /= n;
+                        let ci = (lambdaMax - n) / (n - 1 || 1);
+                        let cr = n > 2 ? ci / (RI_VALUES[n] || 1.49) : 0;
+                        consistencies.push({ lambdaMax, ci, cr });
+
+                        // 5. Acumulado global base
+                        const normalizedWeight = Number(crit.weight) / totalWeight;
+                        for (let i = 0; i < n; i++) globalScores[i] += priorityVector[i] * normalizedWeight;
+                    });
+
+                    // 6. Riesgo (Capa final)
+                    let finalScores = this.apps.map((app, i) => {
+                        const compDecimal = Number(app.compliance) / 100;
+                        return globalScores[i] * (1 / compDecimal);
+                    });
+
+                    this.results = { localPriorities, consistencies, globalScores, finalScores };
+                    this.activeTab = 'results';
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>

@@ -1,0 +1,2223 @@
+2026-04-22 15:42:41,864 - naiveautoml - INFO - Automatically inferred task type: classification
+2026-04-22 15:42:41,864 - naiveautoml - INFO - Automatically inferred task type: classification
+INFO:naiveautoml:Automatically inferred task type: classification
+2026-04-22 15:42:41,892 - naiveautoml - INFO - There are 4 categorical features, which will be binarized.
+2026-04-22 15:42:41,892 - naiveautoml - INFO - There are 4 categorical features, which will be binarized.
+INFO:naiveautoml:There are 4 categorical features, which will be binarized.
+2026-04-22 15:42:41,894 - naiveautoml - INFO - Missing values for the different attributes are RetDays                      0
+Hora_Dia                     0
+Dia_Semana                   0
+Es_Fin_Semana                0
+Volumen_Total_MB             0
+Num_Hilos                    0
+Duracion_Sesion_Segundos     0
+Efecto_Canales               0
+Velocidad_MB_s               0
+Inicio_Cadena                0
+Volumen_Acumulado_GB         0
+Nodo_Nodo2                   0
+Aplicacion_APP12             0
+Aplicacion_APP3              0
+Aplicacion_APP4              0
+Aplicacion_APP5              0
+Aplicacion_APP9              0
+ScheduleLabel_CUMULATIVO     0
+ScheduleLabel_DIFERENCIAL    0
+ScheduleLabel_FULL           0
+dtype: int64.
+2026-04-22 15:42:41,894 - naiveautoml - INFO - Missing values for the different attributes are RetDays                      0
+Hora_Dia                     0
+Dia_Semana                   0
+Es_Fin_Semana                0
+Volumen_Total_MB             0
+Num_Hilos                    0
+Duracion_Sesion_Segundos     0
+Efecto_Canales               0
+Velocidad_MB_s               0
+Inicio_Cadena                0
+Volumen_Acumulado_GB         0
+Nodo_Nodo2                   0
+Aplicacion_APP12             0
+Aplicacion_APP3              0
+Aplicacion_APP4              0
+Aplicacion_APP5              0
+Aplicacion_APP9              0
+ScheduleLabel_CUMULATIVO     0
+ScheduleLabel_DIFERENCIAL    0
+ScheduleLabel_FULL           0
+dtype: int64.
+INFO:naiveautoml:Missing values for the different attributes are RetDays                      0
+Hora_Dia                     0
+Dia_Semana                   0
+Es_Fin_Semana                0
+Volumen_Total_MB             0
+Num_Hilos                    0
+Duracion_Sesion_Segundos     0
+Efecto_Canales               0
+Velocidad_MB_s               0
+Inicio_Cadena                0
+Volumen_Acumulado_GB         0
+Nodo_Nodo2                   0
+Aplicacion_APP12             0
+Aplicacion_APP3              0
+Aplicacion_APP4              0
+Aplicacion_APP5              0
+Aplicacion_APP9              0
+ScheduleLabel_CUMULATIVO     0
+ScheduleLabel_DIFERENCIAL    0
+ScheduleLabel_FULL           0
+dtype: int64.
+2026-04-22 15:42:41,896 - naiveautoml - INFO - Optimizing pipeline under the following conditions.
+                
+        Input type: <class 'pandas.core.frame.DataFrame'> (sparse: False)
+        Input shape: (2753, 20)
+        Target type: <class 'pandas.core.series.Series'> (sparse: False)
+        Target shape: (2753,).
+        Scoring: {'name': 'roc_auc', 'fun': make_scorer(roc_auc_score, response_method=('decision_function', 'predict_proba'))}
+        Other scorings computed: []
+        Timeout Overall: 360
+        Timeout per Candidate: 300
+        Max HPO iterations: 100
+        Max HPO iterations w/o improvement: 100
+        Max HPO time (s) w/o improvement: 1800
+        
+data-pre-processor
+	sklearn.preprocessing._data.MinMaxScaler
+	sklearn.preprocessing._data.Normalizer
+	sklearn.preprocessing._data.PowerTransformer
+	sklearn.preprocessing._data.QuantileTransformer
+	sklearn.preprocessing._data.RobustScaler
+	sklearn.preprocessing._data.StandardScaler
+	sklearn.feature_selection._variance_threshold.VarianceThreshold
+feature-pre-processor
+	sklearn.decomposition._fastica.FastICA
+	sklearn.cluster._agglomerative.FeatureAgglomeration
+	sklearn.decomposition._kernel_pca.KernelPCA
+	sklearn.kernel_approximation.RBFSampler
+	sklearn.kernel_approximation.Nystroem
+	sklearn.decomposition._pca.PCA
+	sklearn.preprocessing._polynomial.PolynomialFeatures
+	sklearn.feature_selection._univariate_selection.SelectPercentile
+	sklearn.feature_selection._univariate_selection.GenericUnivariateSelect
+learner
+	sklearn.ensemble._forest.ExtraTreesClassifier
+	sklearn.ensemble._forest.RandomForestClassifier
+	sklearn.ensemble.HistGradientBoostingClassifier
+	sklearn.naive_bayes.BernoulliNB
+	sklearn.tree._classes.DecisionTreeClassifier
+	sklearn.naive_bayes.GaussianNB
+	sklearn.neighbors._classification.KNeighborsClassifier
+	sklearn.discriminant_analysis.LinearDiscriminantAnalysis
+	sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis
+	sklearn.svm._classes.SVC
+	sklearn.svm._classes.SVC
+	sklearn.svm._classes.SVC
+	sklearn.svm._classes.SVC
+	sklearn.linear_model.LogisticRegression
+	sklearn.neural_network._multilayer_perceptron.MLPClassifier
+	sklearn.naive_bayes.MultinomialNBRandom HPO
+2026-04-22 15:42:41,896 - naiveautoml - INFO - Optimizing pipeline under the following conditions.
+                
+        Input type: <class 'pandas.core.frame.DataFrame'> (sparse: False)
+        Input shape: (2753, 20)
+        Target type: <class 'pandas.core.series.Series'> (sparse: False)
+        Target shape: (2753,).
+        Scoring: {'name': 'roc_auc', 'fun': make_scorer(roc_auc_score, response_method=('decision_function', 'predict_proba'))}
+        Other scorings computed: []
+        Timeout Overall: 360
+        Timeout per Candidate: 300
+        Max HPO iterations: 100
+        Max HPO iterations w/o improvement: 100
+        Max HPO time (s) w/o improvement: 1800
+        
+data-pre-processor
+	sklearn.preprocessing._data.MinMaxScaler
+	sklearn.preprocessing._data.Normalizer
+	sklearn.preprocessing._data.PowerTransformer
+	sklearn.preprocessing._data.QuantileTransformer
+	sklearn.preprocessing._data.RobustScaler
+	sklearn.preprocessing._data.StandardScaler
+	sklearn.feature_selection._variance_threshold.VarianceThreshold
+feature-pre-processor
+	sklearn.decomposition._fastica.FastICA
+	sklearn.cluster._agglomerative.FeatureAgglomeration
+	sklearn.decomposition._kernel_pca.KernelPCA
+	sklearn.kernel_approximation.RBFSampler
+	sklearn.kernel_approximation.Nystroem
+	sklearn.decomposition._pca.PCA
+	sklearn.preprocessing._polynomial.PolynomialFeatures
+	sklearn.feature_selection._univariate_selection.SelectPercentile
+	sklearn.feature_selection._univariate_selection.GenericUnivariateSelect
+learner
+	sklearn.ensemble._forest.ExtraTreesClassifier
+	sklearn.ensemble._forest.RandomForestClassifier
+	sklearn.ensemble.HistGradientBoostingClassifier
+	sklearn.naive_bayes.BernoulliNB
+	sklearn.tree._classes.DecisionTreeClassifier
+	sklearn.naive_bayes.GaussianNB
+	sklearn.neighbors._classification.KNeighborsClassifier
+	sklearn.discriminant_analysis.LinearDiscriminantAnalysis
+	sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis
+	sklearn.svm._classes.SVC
+	sklearn.svm._classes.SVC
+	sklearn.svm._classes.SVC
+	sklearn.svm._classes.SVC
+	sklearn.linear_model.LogisticRegression
+	sklearn.neural_network._multilayer_perceptron.MLPClassifier
+	sklearn.naive_bayes.MultinomialNBRandom HPO
+INFO:naiveautoml:Optimizing pipeline under the following conditions.
+                
+        Input type: <class 'pandas.core.frame.DataFrame'> (sparse: False)
+        Input shape: (2753, 20)
+        Target type: <class 'pandas.core.series.Series'> (sparse: False)
+        Target shape: (2753,).
+        Scoring: {'name': 'roc_auc', 'fun': make_scorer(roc_auc_score, response_method=('decision_function', 'predict_proba'))}
+        Other scorings computed: []
+        Timeout Overall: 360
+        Timeout per Candidate: 300
+        Max HPO iterations: 100
+        Max HPO iterations w/o improvement: 100
+        Max HPO time (s) w/o improvement: 1800
+        
+data-pre-processor
+	sklearn.preprocessing._data.MinMaxScaler
+	sklearn.preprocessing._data.Normalizer
+	sklearn.preprocessing._data.PowerTransformer
+	sklearn.preprocessing._data.QuantileTransformer
+	sklearn.preprocessing._data.RobustScaler
+	sklearn.preprocessing._data.StandardScaler
+	sklearn.feature_selection._variance_threshold.VarianceThreshold
+feature-pre-processor
+	sklearn.decomposition._fastica.FastICA
+	sklearn.cluster._agglomerative.FeatureAgglomeration
+	sklearn.decomposition._kernel_pca.KernelPCA
+	sklearn.kernel_approximation.RBFSampler
+	sklearn.kernel_approximation.Nystroem
+	sklearn.decomposition._pca.PCA
+	sklearn.preprocessing._polynomial.PolynomialFeatures
+	sklearn.feature_selection._univariate_selection.SelectPercentile
+	sklearn.feature_selection._univariate_selection.GenericUnivariateSelect
+learner
+	sklearn.ensemble._forest.ExtraTreesClassifier
+	sklearn.ensemble._forest.RandomForestClassifier
+	sklearn.ensemble.HistGradientBoostingClassifier
+	sklearn.naive_bayes.BernoulliNB
+	sklearn.tree._classes.DecisionTreeClassifier
+	sklearn.naive_bayes.GaussianNB
+	sklearn.neighbors._classification.KNeighborsClassifier
+	sklearn.discriminant_analysis.LinearDiscriminantAnalysis
+	sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis
+	sklearn.svm._classes.SVC
+	sklearn.svm._classes.SVC
+	sklearn.svm._classes.SVC
+	sklearn.svm._classes.SVC
+	sklearn.linear_model.LogisticRegression
+	sklearn.neural_network._multilayer_perceptron.MLPClassifier
+	sklearn.naive_bayes.MultinomialNBRandom HPO
+2026-04-22 15:42:41,898 - naiveautoml - INFO - --------------------------------------------------
+2026-04-22 15:42:41,898 - naiveautoml - INFO - --------------------------------------------------
+INFO:naiveautoml:--------------------------------------------------
+2026-04-22 15:42:41,900 - naiveautoml - INFO - Choosing Algorithm for each slot
+2026-04-22 15:42:41,900 - naiveautoml - INFO - Choosing Algorithm for each slot
+INFO:naiveautoml:Choosing Algorithm for each slot
+2026-04-22 15:42:41,903 - naiveautoml - INFO - --------------------------------------------------
+2026-04-22 15:42:41,903 - naiveautoml - INFO - --------------------------------------------------
+INFO:naiveautoml:--------------------------------------------------
+Cargando el Dataset Consolidado...
+Dimensiones de Entrenamiento (X_train) post-Encoding: (2753, 20)
+Variables Matemáticas (Features) que el modelo evaluará:
+['RetDays', 'Hora_Dia', 'Dia_Semana', 'Es_Fin_Semana', 'Volumen_Total_MB', 'Num_Hilos', 'Duracion_Sesion_Segundos', 'Efecto_Canales', 'Velocidad_MB_s', 'Inicio_Cadena', 'Volumen_Acumulado_GB', 'Nodo_Nodo2', 'Aplicacion_APP12', 'Aplicacion_APP3', 'Aplicacion_APP4', 'Aplicacion_APP5', 'Aplicacion_APP9', 'ScheduleLabel_CUMULATIVO', 'ScheduleLabel_DIFERENCIAL', 'ScheduleLabel_FULL']
+
+Iniciando búsqueda automatizada del mejor modelo (AutoML)...
+Progress for algorithm selection:
+  0%|          | 0/32 [00:00<?, ?it/s]2026-04-22 15:42:41,910 - naiveautoml - INFO - --------------------------------------------------
+2026-04-22 15:42:41,910 - naiveautoml - INFO - --------------------------------------------------
+INFO:naiveautoml:--------------------------------------------------
+2026-04-22 15:42:41,913 - naiveautoml - INFO - Selecting component for step with name: learner
+2026-04-22 15:42:41,913 - naiveautoml - INFO - Selecting component for step with name: learner
+INFO:naiveautoml:Selecting component for step with name: learner
+2026-04-22 15:42:41,918 - naiveautoml - INFO - --------------------------------------------------
+2026-04-22 15:42:41,918 - naiveautoml - INFO - --------------------------------------------------
+INFO:naiveautoml:--------------------------------------------------
+2026-04-22 15:42:41,920 - naiveautoml - INFO - Evaluating sklearn.ensemble._forest.ExtraTreesClassifier.Timeout: 300. Remaining time: 349.94328260421753
+2026-04-22 15:42:41,920 - naiveautoml - INFO - Evaluating sklearn.ensemble._forest.ExtraTreesClassifier.Timeout: 300. Remaining time: 349.94328260421753
+INFO:naiveautoml:Evaluating sklearn.ensemble._forest.ExtraTreesClassifier.Timeout: 300. Remaining time: 349.94328260421753
+2026-04-22 15:42:42,575 - naiveautoml - INFO - Observed score of 0.9933 for default configuration of sklearn.ensemble._forest.ExtraTreesClassifier
+2026-04-22 15:42:42,575 - naiveautoml - INFO - Observed score of 0.9933 for default configuration of sklearn.ensemble._forest.ExtraTreesClassifier
+INFO:naiveautoml:Observed score of 0.9933 for default configuration of sklearn.ensemble._forest.ExtraTreesClassifier
+  3%|▎         | 1/32 [00:00<00:21,  1.47it/s]2026-04-22 15:42:42,593 - naiveautoml - INFO - Evaluating sklearn.ensemble._forest.RandomForestClassifier.Timeout: 300. Remaining time: 349.2699542045593
+2026-04-22 15:42:42,593 - naiveautoml - INFO - Evaluating sklearn.ensemble._forest.RandomForestClassifier.Timeout: 300. Remaining time: 349.2699542045593
+INFO:naiveautoml:Evaluating sklearn.ensemble._forest.RandomForestClassifier.Timeout: 300. Remaining time: 349.2699542045593
+2026-04-22 15:42:43,524 - naiveautoml - INFO - Observed score of 0.9973 for default configuration of sklearn.ensemble._forest.RandomForestClassifier
+2026-04-22 15:42:43,524 - naiveautoml - INFO - Observed score of 0.9973 for default configuration of sklearn.ensemble._forest.RandomForestClassifier
+INFO:naiveautoml:Observed score of 0.9973 for default configuration of sklearn.ensemble._forest.RandomForestClassifier
+  6%|▋         | 2/32 [00:01<00:25,  1.19it/s]2026-04-22 15:42:43,544 - naiveautoml - INFO - Evaluating sklearn.ensemble.HistGradientBoostingClassifier.Timeout: 300. Remaining time: 348.31844568252563
+2026-04-22 15:42:43,544 - naiveautoml - INFO - Evaluating sklearn.ensemble.HistGradientBoostingClassifier.Timeout: 300. Remaining time: 348.31844568252563
+INFO:naiveautoml:Evaluating sklearn.ensemble.HistGradientBoostingClassifier.Timeout: 300. Remaining time: 348.31844568252563
+2026-04-22 15:42:44,573 - naiveautoml - INFO - Observed score of 0.9983 for default configuration of sklearn.ensemble.HistGradientBoostingClassifier
+2026-04-22 15:42:44,573 - naiveautoml - INFO - Observed score of 0.9983 for default configuration of sklearn.ensemble.HistGradientBoostingClassifier
+INFO:naiveautoml:Observed score of 0.9983 for default configuration of sklearn.ensemble.HistGradientBoostingClassifier
+  9%|▉         | 3/32 [00:02<00:27,  1.07it/s]2026-04-22 15:42:44,590 - naiveautoml - INFO - Evaluating sklearn.naive_bayes.BernoulliNB.Timeout: 300. Remaining time: 347.2730596065521
+2026-04-22 15:42:44,590 - naiveautoml - INFO - Evaluating sklearn.naive_bayes.BernoulliNB.Timeout: 300. Remaining time: 347.2730596065521
+INFO:naiveautoml:Evaluating sklearn.naive_bayes.BernoulliNB.Timeout: 300. Remaining time: 347.2730596065521
+2026-04-22 15:42:44,694 - naiveautoml - INFO - Observed score of 0.8224 for default configuration of sklearn.naive_bayes.BernoulliNB
+2026-04-22 15:42:44,694 - naiveautoml - INFO - Observed score of 0.8224 for default configuration of sklearn.naive_bayes.BernoulliNB
+INFO:naiveautoml:Observed score of 0.8224 for default configuration of sklearn.naive_bayes.BernoulliNB
+ 12%|█▎        | 4/32 [00:02<00:17,  1.64it/s]2026-04-22 15:42:44,700 - naiveautoml - INFO - Evaluating sklearn.tree._classes.DecisionTreeClassifier.Timeout: 300. Remaining time: 347.16316533088684
+2026-04-22 15:42:44,700 - naiveautoml - INFO - Evaluating sklearn.tree._classes.DecisionTreeClassifier.Timeout: 300. Remaining time: 347.16316533088684
+INFO:naiveautoml:Evaluating sklearn.tree._classes.DecisionTreeClassifier.Timeout: 300. Remaining time: 347.16316533088684
+2026-04-22 15:42:44,854 - naiveautoml - INFO - Observed score of 0.9733 for default configuration of sklearn.tree._classes.DecisionTreeClassifier
+2026-04-22 15:42:44,854 - naiveautoml - INFO - Observed score of 0.9733 for default configuration of sklearn.tree._classes.DecisionTreeClassifier
+INFO:naiveautoml:Observed score of 0.9733 for default configuration of sklearn.tree._classes.DecisionTreeClassifier
+ 16%|█▌        | 5/32 [00:02<00:12,  2.24it/s]2026-04-22 15:42:44,857 - naiveautoml - INFO - Evaluating sklearn.naive_bayes.GaussianNB.Timeout: 300. Remaining time: 347.00561928749084
+2026-04-22 15:42:44,857 - naiveautoml - INFO - Evaluating sklearn.naive_bayes.GaussianNB.Timeout: 300. Remaining time: 347.00561928749084
+INFO:naiveautoml:Evaluating sklearn.naive_bayes.GaussianNB.Timeout: 300. Remaining time: 347.00561928749084
+2026-04-22 15:42:44,959 - naiveautoml - INFO - Observed score of 0.9211 for default configuration of sklearn.naive_bayes.GaussianNB
+2026-04-22 15:42:44,959 - naiveautoml - INFO - Observed score of 0.9211 for default configuration of sklearn.naive_bayes.GaussianNB
+INFO:naiveautoml:Observed score of 0.9211 for default configuration of sklearn.naive_bayes.GaussianNB
+ 19%|█▉        | 6/32 [00:03<00:08,  3.03it/s]2026-04-22 15:42:44,964 - naiveautoml - INFO - Evaluating sklearn.neighbors._classification.KNeighborsClassifier.Timeout: 300. Remaining time: 346.89892387390137
+2026-04-22 15:42:44,964 - naiveautoml - INFO - Evaluating sklearn.neighbors._classification.KNeighborsClassifier.Timeout: 300. Remaining time: 346.89892387390137
+INFO:naiveautoml:Evaluating sklearn.neighbors._classification.KNeighborsClassifier.Timeout: 300. Remaining time: 346.89892387390137
+2026-04-22 15:42:45,170 - naiveautoml - INFO - Observed score of 0.9352 for default configuration of sklearn.neighbors._classification.KNeighborsClassifier
+2026-04-22 15:42:45,170 - naiveautoml - INFO - Observed score of 0.9352 for default configuration of sklearn.neighbors._classification.KNeighborsClassifier
+INFO:naiveautoml:Observed score of 0.9352 for default configuration of sklearn.neighbors._classification.KNeighborsClassifier
+ 22%|██▏       | 7/32 [00:03<00:07,  3.43it/s]2026-04-22 15:42:45,174 - naiveautoml - INFO - Evaluating sklearn.discriminant_analysis.LinearDiscriminantAnalysis.Timeout: 300. Remaining time: 346.6883707046509
+2026-04-22 15:42:45,174 - naiveautoml - INFO - Evaluating sklearn.discriminant_analysis.LinearDiscriminantAnalysis.Timeout: 300. Remaining time: 346.6883707046509
+INFO:naiveautoml:Evaluating sklearn.discriminant_analysis.LinearDiscriminantAnalysis.Timeout: 300. Remaining time: 346.6883707046509
+2026-04-22 15:42:45,411 - naiveautoml - INFO - Observed score of 0.962 for default configuration of sklearn.discriminant_analysis.LinearDiscriminantAnalysis
+2026-04-22 15:42:45,411 - naiveautoml - INFO - Observed score of 0.962 for default configuration of sklearn.discriminant_analysis.LinearDiscriminantAnalysis
+INFO:naiveautoml:Observed score of 0.962 for default configuration of sklearn.discriminant_analysis.LinearDiscriminantAnalysis
+ 25%|██▌       | 8/32 [00:03<00:06,  3.63it/s]2026-04-22 15:42:45,417 - naiveautoml - INFO - Evaluating sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis.Timeout: 300. Remaining time: 346.4463326931
+2026-04-22 15:42:45,417 - naiveautoml - INFO - Evaluating sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis.Timeout: 300. Remaining time: 346.4463326931
+INFO:naiveautoml:Evaluating sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis.Timeout: 300. Remaining time: 346.4463326931
+2026-04-22 15:42:45,690 - naiveautoml - INFO - Observed score of 0.9796 for default configuration of sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis
+2026-04-22 15:42:45,690 - naiveautoml - INFO - Observed score of 0.9796 for default configuration of sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis
+INFO:naiveautoml:Observed score of 0.9796 for default configuration of sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis
+ 28%|██▊       | 9/32 [00:03<00:06,  3.56it/s]2026-04-22 15:42:45,709 - naiveautoml - INFO - Evaluating sklearn.svm._classes.SVC.Timeout: 300. Remaining time: 346.15419697761536
+2026-04-22 15:42:45,709 - naiveautoml - INFO - Evaluating sklearn.svm._classes.SVC.Timeout: 300. Remaining time: 346.15419697761536
+INFO:naiveautoml:Evaluating sklearn.svm._classes.SVC.Timeout: 300. Remaining time: 346.15419697761536
+2026-04-22 15:47:50,866 - naiveautoml - INFO - Observed score of nan for default configuration of sklearn.svm._classes.SVC
+2026-04-22 15:47:50,866 - naiveautoml - INFO - Observed score of nan for default configuration of sklearn.svm._classes.SVC
+INFO:naiveautoml:Observed score of nan for default configuration of sklearn.svm._classes.SVC
+ 31%|███▏      | 10/32 [05:08<34:36, 94.40s/it]2026-04-22 15:47:50,870 - naiveautoml - INFO - Evaluating sklearn.svm._classes.SVC.Timeout: 300. Remaining time: 40.992515087127686
+2026-04-22 15:47:50,870 - naiveautoml - INFO - Evaluating sklearn.svm._classes.SVC.Timeout: 300. Remaining time: 40.992515087127686
+INFO:naiveautoml:Evaluating sklearn.svm._classes.SVC.Timeout: 300. Remaining time: 40.992515087127686
+2026-04-22 15:47:51,486 - naiveautoml - INFO - Observed score of 0.8072 for default configuration of sklearn.svm._classes.SVC
+2026-04-22 15:47:51,486 - naiveautoml - INFO - Observed score of 0.8072 for default configuration of sklearn.svm._classes.SVC
+INFO:naiveautoml:Observed score of 0.8072 for default configuration of sklearn.svm._classes.SVC
+ 34%|███▍      | 11/32 [05:09<22:59, 65.70s/it]2026-04-22 15:47:51,489 - naiveautoml - INFO - Evaluating sklearn.svm._classes.SVC.Timeout: 300. Remaining time: 40.373414278030396
+2026-04-22 15:47:51,489 - naiveautoml - INFO - Evaluating sklearn.svm._classes.SVC.Timeout: 300. Remaining time: 40.373414278030396
+INFO:naiveautoml:Evaluating sklearn.svm._classes.SVC.Timeout: 300. Remaining time: 40.373414278030396
+2026-04-22 15:47:51,892 - naiveautoml - INFO - Observed score of 0.6954 for default configuration of sklearn.svm._classes.SVC
+2026-04-22 15:47:51,892 - naiveautoml - INFO - Observed score of 0.6954 for default configuration of sklearn.svm._classes.SVC
+INFO:naiveautoml:Observed score of 0.6954 for default configuration of sklearn.svm._classes.SVC
+ 38%|███▊      | 12/32 [05:09<15:16, 45.84s/it]2026-04-22 15:47:51,897 - naiveautoml - INFO - Evaluating sklearn.svm._classes.SVC.Timeout: 300. Remaining time: 39.966198682785034
+2026-04-22 15:47:51,897 - naiveautoml - INFO - Evaluating sklearn.svm._classes.SVC.Timeout: 300. Remaining time: 39.966198682785034
+INFO:naiveautoml:Evaluating sklearn.svm._classes.SVC.Timeout: 300. Remaining time: 39.966198682785034
+2026-04-22 15:47:52,342 - naiveautoml - INFO - Observed score of 0.6724 for default configuration of sklearn.svm._classes.SVC
+2026-04-22 15:47:52,342 - naiveautoml - INFO - Observed score of 0.6724 for default configuration of sklearn.svm._classes.SVC
+INFO:naiveautoml:Observed score of 0.6724 for default configuration of sklearn.svm._classes.SVC
+ 41%|████      | 13/32 [05:10<10:09, 32.09s/it]2026-04-22 15:47:52,345 - naiveautoml - INFO - Evaluating sklearn.linear_model.LogisticRegression.Timeout: 300. Remaining time: 39.51763677597046
+2026-04-22 15:47:52,345 - naiveautoml - INFO - Evaluating sklearn.linear_model.LogisticRegression.Timeout: 300. Remaining time: 39.51763677597046
+INFO:naiveautoml:Evaluating sklearn.linear_model.LogisticRegression.Timeout: 300. Remaining time: 39.51763677597046
+2026-04-22 15:47:53,556 - naiveautoml - INFO - Observed score of 0.8929 for default configuration of sklearn.linear_model.LogisticRegression
+2026-04-22 15:47:53,556 - naiveautoml - INFO - Observed score of 0.8929 for default configuration of sklearn.linear_model.LogisticRegression
+INFO:naiveautoml:Observed score of 0.8929 for default configuration of sklearn.linear_model.LogisticRegression
+ 44%|████▍     | 14/32 [05:11<06:49, 22.76s/it]2026-04-22 15:47:53,560 - naiveautoml - INFO - Evaluating sklearn.neural_network._multilayer_perceptron.MLPClassifier.Timeout: 300. Remaining time: 38.30323028564453
+2026-04-22 15:47:53,560 - naiveautoml - INFO - Evaluating sklearn.neural_network._multilayer_perceptron.MLPClassifier.Timeout: 300. Remaining time: 38.30323028564453
+INFO:naiveautoml:Evaluating sklearn.neural_network._multilayer_perceptron.MLPClassifier.Timeout: 300. Remaining time: 38.30323028564453
+2026-04-22 15:47:54,803 - naiveautoml - INFO - Observed score of 0.8838 for default configuration of sklearn.neural_network._multilayer_perceptron.MLPClassifier
+2026-04-22 15:47:54,803 - naiveautoml - INFO - Observed score of 0.8838 for default configuration of sklearn.neural_network._multilayer_perceptron.MLPClassifier
+INFO:naiveautoml:Observed score of 0.8838 for default configuration of sklearn.neural_network._multilayer_perceptron.MLPClassifier
+ 47%|████▋     | 15/32 [05:12<04:36, 16.28s/it]2026-04-22 15:47:54,809 - naiveautoml - INFO - Evaluating sklearn.naive_bayes.MultinomialNB.Timeout: 300. Remaining time: 37.054044246673584
+2026-04-22 15:47:54,809 - naiveautoml - INFO - Evaluating sklearn.naive_bayes.MultinomialNB.Timeout: 300. Remaining time: 37.054044246673584
+INFO:naiveautoml:Evaluating sklearn.naive_bayes.MultinomialNB.Timeout: 300. Remaining time: 37.054044246673584
+2026-04-22 15:47:54,890 - naiveautoml - INFO - Observed score of nan for default configuration of sklearn.naive_bayes.MultinomialNB
+2026-04-22 15:47:54,890 - naiveautoml - INFO - Observed score of nan for default configuration of sklearn.naive_bayes.MultinomialNB
+INFO:naiveautoml:Observed score of nan for default configuration of sklearn.naive_bayes.MultinomialNB
+2026-04-22 15:47:54,895 - naiveautoml - INFO - --------------------------------------------------
+2026-04-22 15:47:54,895 - naiveautoml - INFO - --------------------------------------------------
+INFO:naiveautoml:--------------------------------------------------
+2026-04-22 15:47:54,901 - naiveautoml - INFO - Selecting component for step with name: data-pre-processor
+2026-04-22 15:47:54,901 - naiveautoml - INFO - Selecting component for step with name: data-pre-processor
+INFO:naiveautoml:Selecting component for step with name: data-pre-processor
+2026-04-22 15:47:54,904 - naiveautoml - INFO - --------------------------------------------------
+2026-04-22 15:47:54,904 - naiveautoml - INFO - --------------------------------------------------
+INFO:naiveautoml:--------------------------------------------------
+2026-04-22 15:47:54,905 - naiveautoml - INFO - Evaluating sklearn.preprocessing._data.MinMaxScaler.Timeout: 300. Remaining time: 36.957507371902466
+2026-04-22 15:47:54,905 - naiveautoml - INFO - Evaluating sklearn.preprocessing._data.MinMaxScaler.Timeout: 300. Remaining time: 36.957507371902466
+INFO:naiveautoml:Evaluating sklearn.preprocessing._data.MinMaxScaler.Timeout: 300. Remaining time: 36.957507371902466
+2026-04-22 15:47:54,924 - naiveautoml - INFO - Preventing evaluation of forbidden pipeline Pipeline(steps=[('impute_and_binarize',
+                 ColumnTransformer(transformers=[('num',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='median'))]),
+                                                  ['RetDays',
+                                                   'Volumen_Total_MB',
+                                                   'Num_Hilos',
+                                                   'Duracion_Sesion_Segundos',
+                                                   'Efecto_Canales',
+                                                   'Velocidad_MB_s',
+                                                   'Volumen_Acumulado_GB',
+                                                   'Nodo_Nodo2',
+                                                   'Aplicacion_APP12',
+                                                   'Aplicacion_APP3',
+                                                   'Aplicacion_APP4',
+                                                   'Aplicacion_APP...
+                                                   'ScheduleLabel_CUMULATIVO',
+                                                   'ScheduleLabel_DIFERENCIAL',
+                                                   'ScheduleLabel_FULL']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('binarizer',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ['Hora_Dia', 'Dia_Semana',
+                                                   'Es_Fin_Semana',
+                                                   'Inicio_Cadena'])])),
+                ('data-pre-processor', MinMaxScaler()),
+                ('learner', HistGradientBoostingClassifier())])
+2026-04-22 15:47:54,924 - naiveautoml - INFO - Preventing evaluation of forbidden pipeline Pipeline(steps=[('impute_and_binarize',
+                 ColumnTransformer(transformers=[('num',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='median'))]),
+                                                  ['RetDays',
+                                                   'Volumen_Total_MB',
+                                                   'Num_Hilos',
+                                                   'Duracion_Sesion_Segundos',
+                                                   'Efecto_Canales',
+                                                   'Velocidad_MB_s',
+                                                   'Volumen_Acumulado_GB',
+                                                   'Nodo_Nodo2',
+                                                   'Aplicacion_APP12',
+                                                   'Aplicacion_APP3',
+                                                   'Aplicacion_APP4',
+                                                   'Aplicacion_APP...
+                                                   'ScheduleLabel_CUMULATIVO',
+                                                   'ScheduleLabel_DIFERENCIAL',
+                                                   'ScheduleLabel_FULL']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('binarizer',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ['Hora_Dia', 'Dia_Semana',
+                                                   'Es_Fin_Semana',
+                                                   'Inicio_Cadena'])])),
+                ('data-pre-processor', MinMaxScaler()),
+                ('learner', HistGradientBoostingClassifier())])
+INFO:naiveautoml:Preventing evaluation of forbidden pipeline Pipeline(steps=[('impute_and_binarize',
+                 ColumnTransformer(transformers=[('num',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='median'))]),
+                                                  ['RetDays',
+                                                   'Volumen_Total_MB',
+                                                   'Num_Hilos',
+                                                   'Duracion_Sesion_Segundos',
+                                                   'Efecto_Canales',
+                                                   'Velocidad_MB_s',
+                                                   'Volumen_Acumulado_GB',
+                                                   'Nodo_Nodo2',
+                                                   'Aplicacion_APP12',
+                                                   'Aplicacion_APP3',
+                                                   'Aplicacion_APP4',
+                                                   'Aplicacion_APP...
+                                                   'ScheduleLabel_CUMULATIVO',
+                                                   'ScheduleLabel_DIFERENCIAL',
+                                                   'ScheduleLabel_FULL']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('binarizer',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ['Hora_Dia', 'Dia_Semana',
+                                                   'Es_Fin_Semana',
+                                                   'Inicio_Cadena'])])),
+                ('data-pre-processor', MinMaxScaler()),
+                ('learner', HistGradientBoostingClassifier())])
+2026-04-22 15:47:54,939 - naiveautoml - INFO - Observed score of nan for default configuration of sklearn.preprocessing._data.MinMaxScaler
+2026-04-22 15:47:54,939 - naiveautoml - INFO - Observed score of nan for default configuration of sklearn.preprocessing._data.MinMaxScaler
+INFO:naiveautoml:Observed score of nan for default configuration of sklearn.preprocessing._data.MinMaxScaler
+ 53%|█████▎    | 17/32 [05:13<02:11,  8.78s/it]2026-04-22 15:47:54,943 - naiveautoml - INFO - Evaluating sklearn.preprocessing._data.Normalizer.Timeout: 300. Remaining time: 36.9202823638916
+2026-04-22 15:47:54,943 - naiveautoml - INFO - Evaluating sklearn.preprocessing._data.Normalizer.Timeout: 300. Remaining time: 36.9202823638916
+INFO:naiveautoml:Evaluating sklearn.preprocessing._data.Normalizer.Timeout: 300. Remaining time: 36.9202823638916
+2026-04-22 15:47:56,200 - naiveautoml - INFO - Observed score of 0.9971 for default configuration of sklearn.preprocessing._data.Normalizer
+2026-04-22 15:47:56,200 - naiveautoml - INFO - Observed score of 0.9971 for default configuration of sklearn.preprocessing._data.Normalizer
+INFO:naiveautoml:Observed score of 0.9971 for default configuration of sklearn.preprocessing._data.Normalizer
+ 56%|█████▋    | 18/32 [05:14<01:36,  6.91s/it]2026-04-22 15:47:56,204 - naiveautoml - INFO - Evaluating sklearn.preprocessing._data.PowerTransformer.Timeout: 300. Remaining time: 35.65863013267517
+2026-04-22 15:47:56,204 - naiveautoml - INFO - Evaluating sklearn.preprocessing._data.PowerTransformer.Timeout: 300. Remaining time: 35.65863013267517
+INFO:naiveautoml:Evaluating sklearn.preprocessing._data.PowerTransformer.Timeout: 300. Remaining time: 35.65863013267517
+2026-04-22 15:47:56,225 - naiveautoml - INFO - Preventing evaluation of forbidden pipeline Pipeline(steps=[('impute_and_binarize',
+                 ColumnTransformer(transformers=[('num',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='median'))]),
+                                                  ['RetDays',
+                                                   'Volumen_Total_MB',
+                                                   'Num_Hilos',
+                                                   'Duracion_Sesion_Segundos',
+                                                   'Efecto_Canales',
+                                                   'Velocidad_MB_s',
+                                                   'Volumen_Acumulado_GB',
+                                                   'Nodo_Nodo2',
+                                                   'Aplicacion_APP12',
+                                                   'Aplicacion_APP3',
+                                                   'Aplicacion_APP4',
+                                                   'Aplicacion_APP...
+                                                   'ScheduleLabel_CUMULATIVO',
+                                                   'ScheduleLabel_DIFERENCIAL',
+                                                   'ScheduleLabel_FULL']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('binarizer',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ['Hora_Dia', 'Dia_Semana',
+                                                   'Es_Fin_Semana',
+                                                   'Inicio_Cadena'])])),
+                ('data-pre-processor', PowerTransformer()),
+                ('learner', HistGradientBoostingClassifier())])
+2026-04-22 15:47:56,225 - naiveautoml - INFO - Preventing evaluation of forbidden pipeline Pipeline(steps=[('impute_and_binarize',
+                 ColumnTransformer(transformers=[('num',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='median'))]),
+                                                  ['RetDays',
+                                                   'Volumen_Total_MB',
+                                                   'Num_Hilos',
+                                                   'Duracion_Sesion_Segundos',
+                                                   'Efecto_Canales',
+                                                   'Velocidad_MB_s',
+                                                   'Volumen_Acumulado_GB',
+                                                   'Nodo_Nodo2',
+                                                   'Aplicacion_APP12',
+                                                   'Aplicacion_APP3',
+                                                   'Aplicacion_APP4',
+                                                   'Aplicacion_APP...
+                                                   'ScheduleLabel_CUMULATIVO',
+                                                   'ScheduleLabel_DIFERENCIAL',
+                                                   'ScheduleLabel_FULL']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('binarizer',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ['Hora_Dia', 'Dia_Semana',
+                                                   'Es_Fin_Semana',
+                                                   'Inicio_Cadena'])])),
+                ('data-pre-processor', PowerTransformer()),
+                ('learner', HistGradientBoostingClassifier())])
+INFO:naiveautoml:Preventing evaluation of forbidden pipeline Pipeline(steps=[('impute_and_binarize',
+                 ColumnTransformer(transformers=[('num',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='median'))]),
+                                                  ['RetDays',
+                                                   'Volumen_Total_MB',
+                                                   'Num_Hilos',
+                                                   'Duracion_Sesion_Segundos',
+                                                   'Efecto_Canales',
+                                                   'Velocidad_MB_s',
+                                                   'Volumen_Acumulado_GB',
+                                                   'Nodo_Nodo2',
+                                                   'Aplicacion_APP12',
+                                                   'Aplicacion_APP3',
+                                                   'Aplicacion_APP4',
+                                                   'Aplicacion_APP...
+                                                   'ScheduleLabel_CUMULATIVO',
+                                                   'ScheduleLabel_DIFERENCIAL',
+                                                   'ScheduleLabel_FULL']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('binarizer',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ['Hora_Dia', 'Dia_Semana',
+                                                   'Es_Fin_Semana',
+                                                   'Inicio_Cadena'])])),
+                ('data-pre-processor', PowerTransformer()),
+                ('learner', HistGradientBoostingClassifier())])
+2026-04-22 15:47:56,241 - naiveautoml - INFO - Observed score of nan for default configuration of sklearn.preprocessing._data.PowerTransformer
+2026-04-22 15:47:56,241 - naiveautoml - INFO - Observed score of nan for default configuration of sklearn.preprocessing._data.PowerTransformer
+INFO:naiveautoml:Observed score of nan for default configuration of sklearn.preprocessing._data.PowerTransformer
+2026-04-22 15:47:56,246 - naiveautoml - INFO - Evaluating sklearn.preprocessing._data.QuantileTransformer.Timeout: 300. Remaining time: 35.61698007583618
+2026-04-22 15:47:56,246 - naiveautoml - INFO - Evaluating sklearn.preprocessing._data.QuantileTransformer.Timeout: 300. Remaining time: 35.61698007583618
+INFO:naiveautoml:Evaluating sklearn.preprocessing._data.QuantileTransformer.Timeout: 300. Remaining time: 35.61698007583618
+2026-04-22 15:47:56,262 - naiveautoml - INFO - Preventing evaluation of forbidden pipeline Pipeline(steps=[('impute_and_binarize',
+                 ColumnTransformer(transformers=[('num',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='median'))]),
+                                                  ['RetDays',
+                                                   'Volumen_Total_MB',
+                                                   'Num_Hilos',
+                                                   'Duracion_Sesion_Segundos',
+                                                   'Efecto_Canales',
+                                                   'Velocidad_MB_s',
+                                                   'Volumen_Acumulado_GB',
+                                                   'Nodo_Nodo2',
+                                                   'Aplicacion_APP12',
+                                                   'Aplicacion_APP3',
+                                                   'Aplicacion_APP4',
+                                                   'Aplicacion_APP...
+                                                   'ScheduleLabel_CUMULATIVO',
+                                                   'ScheduleLabel_DIFERENCIAL',
+                                                   'ScheduleLabel_FULL']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('binarizer',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ['Hora_Dia', 'Dia_Semana',
+                                                   'Es_Fin_Semana',
+                                                   'Inicio_Cadena'])])),
+                ('data-pre-processor', QuantileTransformer()),
+                ('learner', HistGradientBoostingClassifier())])
+2026-04-22 15:47:56,262 - naiveautoml - INFO - Preventing evaluation of forbidden pipeline Pipeline(steps=[('impute_and_binarize',
+                 ColumnTransformer(transformers=[('num',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='median'))]),
+                                                  ['RetDays',
+                                                   'Volumen_Total_MB',
+                                                   'Num_Hilos',
+                                                   'Duracion_Sesion_Segundos',
+                                                   'Efecto_Canales',
+                                                   'Velocidad_MB_s',
+                                                   'Volumen_Acumulado_GB',
+                                                   'Nodo_Nodo2',
+                                                   'Aplicacion_APP12',
+                                                   'Aplicacion_APP3',
+                                                   'Aplicacion_APP4',
+                                                   'Aplicacion_APP...
+                                                   'ScheduleLabel_CUMULATIVO',
+                                                   'ScheduleLabel_DIFERENCIAL',
+                                                   'ScheduleLabel_FULL']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('binarizer',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ['Hora_Dia', 'Dia_Semana',
+                                                   'Es_Fin_Semana',
+                                                   'Inicio_Cadena'])])),
+                ('data-pre-processor', QuantileTransformer()),
+                ('learner', HistGradientBoostingClassifier())])
+INFO:naiveautoml:Preventing evaluation of forbidden pipeline Pipeline(steps=[('impute_and_binarize',
+                 ColumnTransformer(transformers=[('num',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='median'))]),
+                                                  ['RetDays',
+                                                   'Volumen_Total_MB',
+                                                   'Num_Hilos',
+                                                   'Duracion_Sesion_Segundos',
+                                                   'Efecto_Canales',
+                                                   'Velocidad_MB_s',
+                                                   'Volumen_Acumulado_GB',
+                                                   'Nodo_Nodo2',
+                                                   'Aplicacion_APP12',
+                                                   'Aplicacion_APP3',
+                                                   'Aplicacion_APP4',
+                                                   'Aplicacion_APP...
+                                                   'ScheduleLabel_CUMULATIVO',
+                                                   'ScheduleLabel_DIFERENCIAL',
+                                                   'ScheduleLabel_FULL']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('binarizer',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ['Hora_Dia', 'Dia_Semana',
+                                                   'Es_Fin_Semana',
+                                                   'Inicio_Cadena'])])),
+                ('data-pre-processor', QuantileTransformer()),
+                ('learner', HistGradientBoostingClassifier())])
+2026-04-22 15:47:56,278 - naiveautoml - INFO - Observed score of nan for default configuration of sklearn.preprocessing._data.QuantileTransformer
+2026-04-22 15:47:56,278 - naiveautoml - INFO - Observed score of nan for default configuration of sklearn.preprocessing._data.QuantileTransformer
+INFO:naiveautoml:Observed score of nan for default configuration of sklearn.preprocessing._data.QuantileTransformer
+2026-04-22 15:47:56,281 - naiveautoml - INFO - Evaluating sklearn.preprocessing._data.RobustScaler.Timeout: 300. Remaining time: 35.5814483165741
+2026-04-22 15:47:56,281 - naiveautoml - INFO - Evaluating sklearn.preprocessing._data.RobustScaler.Timeout: 300. Remaining time: 35.5814483165741
+INFO:naiveautoml:Evaluating sklearn.preprocessing._data.RobustScaler.Timeout: 300. Remaining time: 35.5814483165741
+2026-04-22 15:47:56,308 - naiveautoml - INFO - Preventing evaluation of forbidden pipeline Pipeline(steps=[('impute_and_binarize',
+                 ColumnTransformer(transformers=[('num',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='median'))]),
+                                                  ['RetDays',
+                                                   'Volumen_Total_MB',
+                                                   'Num_Hilos',
+                                                   'Duracion_Sesion_Segundos',
+                                                   'Efecto_Canales',
+                                                   'Velocidad_MB_s',
+                                                   'Volumen_Acumulado_GB',
+                                                   'Nodo_Nodo2',
+                                                   'Aplicacion_APP12',
+                                                   'Aplicacion_APP3',
+                                                   'Aplicacion_APP4',
+                                                   'Aplicacion_APP...
+                                                   'ScheduleLabel_CUMULATIVO',
+                                                   'ScheduleLabel_DIFERENCIAL',
+                                                   'ScheduleLabel_FULL']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('binarizer',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ['Hora_Dia', 'Dia_Semana',
+                                                   'Es_Fin_Semana',
+                                                   'Inicio_Cadena'])])),
+                ('data-pre-processor', RobustScaler()),
+                ('learner', HistGradientBoostingClassifier())])
+2026-04-22 15:47:56,308 - naiveautoml - INFO - Preventing evaluation of forbidden pipeline Pipeline(steps=[('impute_and_binarize',
+                 ColumnTransformer(transformers=[('num',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='median'))]),
+                                                  ['RetDays',
+                                                   'Volumen_Total_MB',
+                                                   'Num_Hilos',
+                                                   'Duracion_Sesion_Segundos',
+                                                   'Efecto_Canales',
+                                                   'Velocidad_MB_s',
+                                                   'Volumen_Acumulado_GB',
+                                                   'Nodo_Nodo2',
+                                                   'Aplicacion_APP12',
+                                                   'Aplicacion_APP3',
+                                                   'Aplicacion_APP4',
+                                                   'Aplicacion_APP...
+                                                   'ScheduleLabel_CUMULATIVO',
+                                                   'ScheduleLabel_DIFERENCIAL',
+                                                   'ScheduleLabel_FULL']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('binarizer',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ['Hora_Dia', 'Dia_Semana',
+                                                   'Es_Fin_Semana',
+                                                   'Inicio_Cadena'])])),
+                ('data-pre-processor', RobustScaler()),
+                ('learner', HistGradientBoostingClassifier())])
+INFO:naiveautoml:Preventing evaluation of forbidden pipeline Pipeline(steps=[('impute_and_binarize',
+                 ColumnTransformer(transformers=[('num',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='median'))]),
+                                                  ['RetDays',
+                                                   'Volumen_Total_MB',
+                                                   'Num_Hilos',
+                                                   'Duracion_Sesion_Segundos',
+                                                   'Efecto_Canales',
+                                                   'Velocidad_MB_s',
+                                                   'Volumen_Acumulado_GB',
+                                                   'Nodo_Nodo2',
+                                                   'Aplicacion_APP12',
+                                                   'Aplicacion_APP3',
+                                                   'Aplicacion_APP4',
+                                                   'Aplicacion_APP...
+                                                   'ScheduleLabel_CUMULATIVO',
+                                                   'ScheduleLabel_DIFERENCIAL',
+                                                   'ScheduleLabel_FULL']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('binarizer',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ['Hora_Dia', 'Dia_Semana',
+                                                   'Es_Fin_Semana',
+                                                   'Inicio_Cadena'])])),
+                ('data-pre-processor', RobustScaler()),
+                ('learner', HistGradientBoostingClassifier())])
+2026-04-22 15:47:56,326 - naiveautoml - INFO - Observed score of nan for default configuration of sklearn.preprocessing._data.RobustScaler
+2026-04-22 15:47:56,326 - naiveautoml - INFO - Observed score of nan for default configuration of sklearn.preprocessing._data.RobustScaler
+INFO:naiveautoml:Observed score of nan for default configuration of sklearn.preprocessing._data.RobustScaler
+ 66%|██████▌   | 21/32 [05:14<00:37,  3.37s/it]2026-04-22 15:47:56,329 - naiveautoml - INFO - Evaluating sklearn.preprocessing._data.StandardScaler.Timeout: 300. Remaining time: 35.53354859352112
+2026-04-22 15:47:56,329 - naiveautoml - INFO - Evaluating sklearn.preprocessing._data.StandardScaler.Timeout: 300. Remaining time: 35.53354859352112
+INFO:naiveautoml:Evaluating sklearn.preprocessing._data.StandardScaler.Timeout: 300. Remaining time: 35.53354859352112
+2026-04-22 15:47:56,343 - naiveautoml - INFO - Preventing evaluation of forbidden pipeline Pipeline(steps=[('impute_and_binarize',
+                 ColumnTransformer(transformers=[('num',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='median'))]),
+                                                  ['RetDays',
+                                                   'Volumen_Total_MB',
+                                                   'Num_Hilos',
+                                                   'Duracion_Sesion_Segundos',
+                                                   'Efecto_Canales',
+                                                   'Velocidad_MB_s',
+                                                   'Volumen_Acumulado_GB',
+                                                   'Nodo_Nodo2',
+                                                   'Aplicacion_APP12',
+                                                   'Aplicacion_APP3',
+                                                   'Aplicacion_APP4',
+                                                   'Aplicacion_APP...
+                                                   'ScheduleLabel_CUMULATIVO',
+                                                   'ScheduleLabel_DIFERENCIAL',
+                                                   'ScheduleLabel_FULL']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('binarizer',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ['Hora_Dia', 'Dia_Semana',
+                                                   'Es_Fin_Semana',
+                                                   'Inicio_Cadena'])])),
+                ('data-pre-processor', StandardScaler()),
+                ('learner', HistGradientBoostingClassifier())])
+2026-04-22 15:47:56,343 - naiveautoml - INFO - Preventing evaluation of forbidden pipeline Pipeline(steps=[('impute_and_binarize',
+                 ColumnTransformer(transformers=[('num',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='median'))]),
+                                                  ['RetDays',
+                                                   'Volumen_Total_MB',
+                                                   'Num_Hilos',
+                                                   'Duracion_Sesion_Segundos',
+                                                   'Efecto_Canales',
+                                                   'Velocidad_MB_s',
+                                                   'Volumen_Acumulado_GB',
+                                                   'Nodo_Nodo2',
+                                                   'Aplicacion_APP12',
+                                                   'Aplicacion_APP3',
+                                                   'Aplicacion_APP4',
+                                                   'Aplicacion_APP...
+                                                   'ScheduleLabel_CUMULATIVO',
+                                                   'ScheduleLabel_DIFERENCIAL',
+                                                   'ScheduleLabel_FULL']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('binarizer',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ['Hora_Dia', 'Dia_Semana',
+                                                   'Es_Fin_Semana',
+                                                   'Inicio_Cadena'])])),
+                ('data-pre-processor', StandardScaler()),
+                ('learner', HistGradientBoostingClassifier())])
+INFO:naiveautoml:Preventing evaluation of forbidden pipeline Pipeline(steps=[('impute_and_binarize',
+                 ColumnTransformer(transformers=[('num',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='median'))]),
+                                                  ['RetDays',
+                                                   'Volumen_Total_MB',
+                                                   'Num_Hilos',
+                                                   'Duracion_Sesion_Segundos',
+                                                   'Efecto_Canales',
+                                                   'Velocidad_MB_s',
+                                                   'Volumen_Acumulado_GB',
+                                                   'Nodo_Nodo2',
+                                                   'Aplicacion_APP12',
+                                                   'Aplicacion_APP3',
+                                                   'Aplicacion_APP4',
+                                                   'Aplicacion_APP...
+                                                   'ScheduleLabel_CUMULATIVO',
+                                                   'ScheduleLabel_DIFERENCIAL',
+                                                   'ScheduleLabel_FULL']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('binarizer',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ['Hora_Dia', 'Dia_Semana',
+                                                   'Es_Fin_Semana',
+                                                   'Inicio_Cadena'])])),
+                ('data-pre-processor', StandardScaler()),
+                ('learner', HistGradientBoostingClassifier())])
+2026-04-22 15:47:56,362 - naiveautoml - INFO - Observed score of nan for default configuration of sklearn.preprocessing._data.StandardScaler
+2026-04-22 15:47:56,362 - naiveautoml - INFO - Observed score of nan for default configuration of sklearn.preprocessing._data.StandardScaler
+INFO:naiveautoml:Observed score of nan for default configuration of sklearn.preprocessing._data.StandardScaler
+2026-04-22 15:47:56,365 - naiveautoml - INFO - Evaluating sklearn.feature_selection._variance_threshold.VarianceThreshold.Timeout: 300. Remaining time: 35.49738168716431
+2026-04-22 15:47:56,365 - naiveautoml - INFO - Evaluating sklearn.feature_selection._variance_threshold.VarianceThreshold.Timeout: 300. Remaining time: 35.49738168716431
+INFO:naiveautoml:Evaluating sklearn.feature_selection._variance_threshold.VarianceThreshold.Timeout: 300. Remaining time: 35.49738168716431
+2026-04-22 15:47:57,426 - naiveautoml - INFO - Observed score of 0.998 for default configuration of sklearn.feature_selection._variance_threshold.VarianceThreshold
+2026-04-22 15:47:57,426 - naiveautoml - INFO - Observed score of 0.998 for default configuration of sklearn.feature_selection._variance_threshold.VarianceThreshold
+INFO:naiveautoml:Observed score of 0.998 for default configuration of sklearn.feature_selection._variance_threshold.VarianceThreshold
+ 72%|███████▏  | 23/32 [05:15<00:21,  2.44s/it]2026-04-22 15:47:57,430 - naiveautoml - INFO - --------------------------------------------------
+2026-04-22 15:47:57,430 - naiveautoml - INFO - --------------------------------------------------
+INFO:naiveautoml:--------------------------------------------------
+2026-04-22 15:47:57,431 - naiveautoml - INFO - Selecting component for step with name: feature-pre-processor
+2026-04-22 15:47:57,431 - naiveautoml - INFO - Selecting component for step with name: feature-pre-processor
+INFO:naiveautoml:Selecting component for step with name: feature-pre-processor
+2026-04-22 15:47:57,434 - naiveautoml - INFO - --------------------------------------------------
+2026-04-22 15:47:57,434 - naiveautoml - INFO - --------------------------------------------------
+INFO:naiveautoml:--------------------------------------------------
+2026-04-22 15:47:57,435 - naiveautoml - INFO - Evaluating sklearn.decomposition._fastica.FastICA.Timeout: 300. Remaining time: 34.427435636520386
+2026-04-22 15:47:57,435 - naiveautoml - INFO - Evaluating sklearn.decomposition._fastica.FastICA.Timeout: 300. Remaining time: 34.427435636520386
+INFO:naiveautoml:Evaluating sklearn.decomposition._fastica.FastICA.Timeout: 300. Remaining time: 34.427435636520386
+2026-04-22 15:48:00,169 - naiveautoml - INFO - Observed score of 0.9842 for default configuration of sklearn.decomposition._fastica.FastICA
+2026-04-22 15:48:00,169 - naiveautoml - INFO - Observed score of 0.9842 for default configuration of sklearn.decomposition._fastica.FastICA
+INFO:naiveautoml:Observed score of 0.9842 for default configuration of sklearn.decomposition._fastica.FastICA
+ 75%|███████▌  | 24/32 [05:18<00:19,  2.50s/it]2026-04-22 15:48:00,177 - naiveautoml - INFO - Evaluating sklearn.cluster._agglomerative.FeatureAgglomeration.Timeout: 300. Remaining time: 31.685399055480957
+2026-04-22 15:48:00,177 - naiveautoml - INFO - Evaluating sklearn.cluster._agglomerative.FeatureAgglomeration.Timeout: 300. Remaining time: 31.685399055480957
+INFO:naiveautoml:Evaluating sklearn.cluster._agglomerative.FeatureAgglomeration.Timeout: 300. Remaining time: 31.685399055480957
+2026-04-22 15:48:00,215 - naiveautoml - INFO - Preventing evaluation of forbidden pipeline Pipeline(steps=[('impute_and_binarize',
+                 ColumnTransformer(transformers=[('num',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='median'))]),
+                                                  ['RetDays',
+                                                   'Volumen_Total_MB',
+                                                   'Num_Hilos',
+                                                   'Duracion_Sesion_Segundos',
+                                                   'Efecto_Canales',
+                                                   'Velocidad_MB_s',
+                                                   'Volumen_Acumulado_GB',
+                                                   'Nodo_Nodo2',
+                                                   'Aplicacion_APP12',
+                                                   'Aplicacion_APP3',
+                                                   'Aplicacion_APP4',
+                                                   'Aplicacion_APP...
+                                                   'ScheduleLabel_CUMULATIVO',
+                                                   'ScheduleLabel_DIFERENCIAL',
+                                                   'ScheduleLabel_FULL']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('binarizer',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ['Hora_Dia', 'Dia_Semana',
+                                                   'Es_Fin_Semana',
+                                                   'Inicio_Cadena'])])),
+                ('feature-pre-processor', FeatureAgglomeration()),
+                ('learner', HistGradientBoostingClassifier())])
+2026-04-22 15:48:00,215 - naiveautoml - INFO - Preventing evaluation of forbidden pipeline Pipeline(steps=[('impute_and_binarize',
+                 ColumnTransformer(transformers=[('num',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='median'))]),
+                                                  ['RetDays',
+                                                   'Volumen_Total_MB',
+                                                   'Num_Hilos',
+                                                   'Duracion_Sesion_Segundos',
+                                                   'Efecto_Canales',
+                                                   'Velocidad_MB_s',
+                                                   'Volumen_Acumulado_GB',
+                                                   'Nodo_Nodo2',
+                                                   'Aplicacion_APP12',
+                                                   'Aplicacion_APP3',
+                                                   'Aplicacion_APP4',
+                                                   'Aplicacion_APP...
+                                                   'ScheduleLabel_CUMULATIVO',
+                                                   'ScheduleLabel_DIFERENCIAL',
+                                                   'ScheduleLabel_FULL']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('binarizer',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ['Hora_Dia', 'Dia_Semana',
+                                                   'Es_Fin_Semana',
+                                                   'Inicio_Cadena'])])),
+                ('feature-pre-processor', FeatureAgglomeration()),
+                ('learner', HistGradientBoostingClassifier())])
+INFO:naiveautoml:Preventing evaluation of forbidden pipeline Pipeline(steps=[('impute_and_binarize',
+                 ColumnTransformer(transformers=[('num',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='median'))]),
+                                                  ['RetDays',
+                                                   'Volumen_Total_MB',
+                                                   'Num_Hilos',
+                                                   'Duracion_Sesion_Segundos',
+                                                   'Efecto_Canales',
+                                                   'Velocidad_MB_s',
+                                                   'Volumen_Acumulado_GB',
+                                                   'Nodo_Nodo2',
+                                                   'Aplicacion_APP12',
+                                                   'Aplicacion_APP3',
+                                                   'Aplicacion_APP4',
+                                                   'Aplicacion_APP...
+                                                   'ScheduleLabel_CUMULATIVO',
+                                                   'ScheduleLabel_DIFERENCIAL',
+                                                   'ScheduleLabel_FULL']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('binarizer',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ['Hora_Dia', 'Dia_Semana',
+                                                   'Es_Fin_Semana',
+                                                   'Inicio_Cadena'])])),
+                ('feature-pre-processor', FeatureAgglomeration()),
+                ('learner', HistGradientBoostingClassifier())])
+2026-04-22 15:48:00,250 - naiveautoml - INFO - Observed score of nan for default configuration of sklearn.cluster._agglomerative.FeatureAgglomeration
+2026-04-22 15:48:00,250 - naiveautoml - INFO - Observed score of nan for default configuration of sklearn.cluster._agglomerative.FeatureAgglomeration
+INFO:naiveautoml:Observed score of nan for default configuration of sklearn.cluster._agglomerative.FeatureAgglomeration
+2026-04-22 15:48:00,256 - naiveautoml - INFO - Evaluating sklearn.decomposition._kernel_pca.KernelPCA.Timeout: 300. Remaining time: 31.607166051864624
+2026-04-22 15:48:00,256 - naiveautoml - INFO - Evaluating sklearn.decomposition._kernel_pca.KernelPCA.Timeout: 300. Remaining time: 31.607166051864624
+INFO:naiveautoml:Evaluating sklearn.decomposition._kernel_pca.KernelPCA.Timeout: 300. Remaining time: 31.607166051864624
+2026-04-22 15:48:00,276 - naiveautoml - INFO - Preventing evaluation of forbidden pipeline Pipeline(steps=[('impute_and_binarize',
+                 ColumnTransformer(transformers=[('num',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='median'))]),
+                                                  ['RetDays',
+                                                   'Volumen_Total_MB',
+                                                   'Num_Hilos',
+                                                   'Duracion_Sesion_Segundos',
+                                                   'Efecto_Canales',
+                                                   'Velocidad_MB_s',
+                                                   'Volumen_Acumulado_GB',
+                                                   'Nodo_Nodo2',
+                                                   'Aplicacion_APP12',
+                                                   'Aplicacion_APP3',
+                                                   'Aplicacion_APP4',
+                                                   'Aplicacion_APP...
+                                                   'ScheduleLabel_CUMULATIVO',
+                                                   'ScheduleLabel_DIFERENCIAL',
+                                                   'ScheduleLabel_FULL']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('binarizer',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ['Hora_Dia', 'Dia_Semana',
+                                                   'Es_Fin_Semana',
+                                                   'Inicio_Cadena'])])),
+                ('feature-pre-processor', KernelPCA()),
+                ('learner', HistGradientBoostingClassifier())])
+2026-04-22 15:48:00,276 - naiveautoml - INFO - Preventing evaluation of forbidden pipeline Pipeline(steps=[('impute_and_binarize',
+                 ColumnTransformer(transformers=[('num',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='median'))]),
+                                                  ['RetDays',
+                                                   'Volumen_Total_MB',
+                                                   'Num_Hilos',
+                                                   'Duracion_Sesion_Segundos',
+                                                   'Efecto_Canales',
+                                                   'Velocidad_MB_s',
+                                                   'Volumen_Acumulado_GB',
+                                                   'Nodo_Nodo2',
+                                                   'Aplicacion_APP12',
+                                                   'Aplicacion_APP3',
+                                                   'Aplicacion_APP4',
+                                                   'Aplicacion_APP...
+                                                   'ScheduleLabel_CUMULATIVO',
+                                                   'ScheduleLabel_DIFERENCIAL',
+                                                   'ScheduleLabel_FULL']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('binarizer',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ['Hora_Dia', 'Dia_Semana',
+                                                   'Es_Fin_Semana',
+                                                   'Inicio_Cadena'])])),
+                ('feature-pre-processor', KernelPCA()),
+                ('learner', HistGradientBoostingClassifier())])
+INFO:naiveautoml:Preventing evaluation of forbidden pipeline Pipeline(steps=[('impute_and_binarize',
+                 ColumnTransformer(transformers=[('num',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='median'))]),
+                                                  ['RetDays',
+                                                   'Volumen_Total_MB',
+                                                   'Num_Hilos',
+                                                   'Duracion_Sesion_Segundos',
+                                                   'Efecto_Canales',
+                                                   'Velocidad_MB_s',
+                                                   'Volumen_Acumulado_GB',
+                                                   'Nodo_Nodo2',
+                                                   'Aplicacion_APP12',
+                                                   'Aplicacion_APP3',
+                                                   'Aplicacion_APP4',
+                                                   'Aplicacion_APP...
+                                                   'ScheduleLabel_CUMULATIVO',
+                                                   'ScheduleLabel_DIFERENCIAL',
+                                                   'ScheduleLabel_FULL']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('binarizer',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ['Hora_Dia', 'Dia_Semana',
+                                                   'Es_Fin_Semana',
+                                                   'Inicio_Cadena'])])),
+                ('feature-pre-processor', KernelPCA()),
+                ('learner', HistGradientBoostingClassifier())])
+2026-04-22 15:48:00,293 - naiveautoml - INFO - Observed score of nan for default configuration of sklearn.decomposition._kernel_pca.KernelPCA
+2026-04-22 15:48:00,293 - naiveautoml - INFO - Observed score of nan for default configuration of sklearn.decomposition._kernel_pca.KernelPCA
+INFO:naiveautoml:Observed score of nan for default configuration of sklearn.decomposition._kernel_pca.KernelPCA
+ 81%|████████▏ | 26/32 [05:18<00:09,  1.64s/it]2026-04-22 15:48:00,301 - naiveautoml - INFO - Evaluating sklearn.kernel_approximation.RBFSampler.Timeout: 300. Remaining time: 31.562262773513794
+2026-04-22 15:48:00,301 - naiveautoml - INFO - Evaluating sklearn.kernel_approximation.RBFSampler.Timeout: 300. Remaining time: 31.562262773513794
+INFO:naiveautoml:Evaluating sklearn.kernel_approximation.RBFSampler.Timeout: 300. Remaining time: 31.562262773513794
+2026-04-22 15:48:00,327 - naiveautoml - INFO - Preventing evaluation of forbidden pipeline Pipeline(steps=[('impute_and_binarize',
+                 ColumnTransformer(transformers=[('num',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='median'))]),
+                                                  ['RetDays',
+                                                   'Volumen_Total_MB',
+                                                   'Num_Hilos',
+                                                   'Duracion_Sesion_Segundos',
+                                                   'Efecto_Canales',
+                                                   'Velocidad_MB_s',
+                                                   'Volumen_Acumulado_GB',
+                                                   'Nodo_Nodo2',
+                                                   'Aplicacion_APP12',
+                                                   'Aplicacion_APP3',
+                                                   'Aplicacion_APP4',
+                                                   'Aplicacion_APP...
+                                                   'ScheduleLabel_CUMULATIVO',
+                                                   'ScheduleLabel_DIFERENCIAL',
+                                                   'ScheduleLabel_FULL']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('binarizer',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ['Hora_Dia', 'Dia_Semana',
+                                                   'Es_Fin_Semana',
+                                                   'Inicio_Cadena'])])),
+                ('feature-pre-processor', RBFSampler()),
+                ('learner', HistGradientBoostingClassifier())])
+2026-04-22 15:48:00,327 - naiveautoml - INFO - Preventing evaluation of forbidden pipeline Pipeline(steps=[('impute_and_binarize',
+                 ColumnTransformer(transformers=[('num',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='median'))]),
+                                                  ['RetDays',
+                                                   'Volumen_Total_MB',
+                                                   'Num_Hilos',
+                                                   'Duracion_Sesion_Segundos',
+                                                   'Efecto_Canales',
+                                                   'Velocidad_MB_s',
+                                                   'Volumen_Acumulado_GB',
+                                                   'Nodo_Nodo2',
+                                                   'Aplicacion_APP12',
+                                                   'Aplicacion_APP3',
+                                                   'Aplicacion_APP4',
+                                                   'Aplicacion_APP...
+                                                   'ScheduleLabel_CUMULATIVO',
+                                                   'ScheduleLabel_DIFERENCIAL',
+                                                   'ScheduleLabel_FULL']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('binarizer',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ['Hora_Dia', 'Dia_Semana',
+                                                   'Es_Fin_Semana',
+                                                   'Inicio_Cadena'])])),
+                ('feature-pre-processor', RBFSampler()),
+                ('learner', HistGradientBoostingClassifier())])
+INFO:naiveautoml:Preventing evaluation of forbidden pipeline Pipeline(steps=[('impute_and_binarize',
+                 ColumnTransformer(transformers=[('num',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='median'))]),
+                                                  ['RetDays',
+                                                   'Volumen_Total_MB',
+                                                   'Num_Hilos',
+                                                   'Duracion_Sesion_Segundos',
+                                                   'Efecto_Canales',
+                                                   'Velocidad_MB_s',
+                                                   'Volumen_Acumulado_GB',
+                                                   'Nodo_Nodo2',
+                                                   'Aplicacion_APP12',
+                                                   'Aplicacion_APP3',
+                                                   'Aplicacion_APP4',
+                                                   'Aplicacion_APP...
+                                                   'ScheduleLabel_CUMULATIVO',
+                                                   'ScheduleLabel_DIFERENCIAL',
+                                                   'ScheduleLabel_FULL']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('binarizer',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ['Hora_Dia', 'Dia_Semana',
+                                                   'Es_Fin_Semana',
+                                                   'Inicio_Cadena'])])),
+                ('feature-pre-processor', RBFSampler()),
+                ('learner', HistGradientBoostingClassifier())])
+2026-04-22 15:48:00,350 - naiveautoml - INFO - Observed score of nan for default configuration of sklearn.kernel_approximation.RBFSampler
+2026-04-22 15:48:00,350 - naiveautoml - INFO - Observed score of nan for default configuration of sklearn.kernel_approximation.RBFSampler
+INFO:naiveautoml:Observed score of nan for default configuration of sklearn.kernel_approximation.RBFSampler
+2026-04-22 15:48:00,353 - naiveautoml - INFO - Evaluating sklearn.kernel_approximation.Nystroem.Timeout: 300. Remaining time: 31.510038375854492
+2026-04-22 15:48:00,353 - naiveautoml - INFO - Evaluating sklearn.kernel_approximation.Nystroem.Timeout: 300. Remaining time: 31.510038375854492
+INFO:naiveautoml:Evaluating sklearn.kernel_approximation.Nystroem.Timeout: 300. Remaining time: 31.510038375854492
+2026-04-22 15:48:00,380 - naiveautoml - INFO - Preventing evaluation of forbidden pipeline Pipeline(steps=[('impute_and_binarize',
+                 ColumnTransformer(transformers=[('num',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='median'))]),
+                                                  ['RetDays',
+                                                   'Volumen_Total_MB',
+                                                   'Num_Hilos',
+                                                   'Duracion_Sesion_Segundos',
+                                                   'Efecto_Canales',
+                                                   'Velocidad_MB_s',
+                                                   'Volumen_Acumulado_GB',
+                                                   'Nodo_Nodo2',
+                                                   'Aplicacion_APP12',
+                                                   'Aplicacion_APP3',
+                                                   'Aplicacion_APP4',
+                                                   'Aplicacion_APP...
+                                                   'ScheduleLabel_CUMULATIVO',
+                                                   'ScheduleLabel_DIFERENCIAL',
+                                                   'ScheduleLabel_FULL']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('binarizer',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ['Hora_Dia', 'Dia_Semana',
+                                                   'Es_Fin_Semana',
+                                                   'Inicio_Cadena'])])),
+                ('feature-pre-processor', Nystroem()),
+                ('learner', HistGradientBoostingClassifier())])
+2026-04-22 15:48:00,380 - naiveautoml - INFO - Preventing evaluation of forbidden pipeline Pipeline(steps=[('impute_and_binarize',
+                 ColumnTransformer(transformers=[('num',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='median'))]),
+                                                  ['RetDays',
+                                                   'Volumen_Total_MB',
+                                                   'Num_Hilos',
+                                                   'Duracion_Sesion_Segundos',
+                                                   'Efecto_Canales',
+                                                   'Velocidad_MB_s',
+                                                   'Volumen_Acumulado_GB',
+                                                   'Nodo_Nodo2',
+                                                   'Aplicacion_APP12',
+                                                   'Aplicacion_APP3',
+                                                   'Aplicacion_APP4',
+                                                   'Aplicacion_APP...
+                                                   'ScheduleLabel_CUMULATIVO',
+                                                   'ScheduleLabel_DIFERENCIAL',
+                                                   'ScheduleLabel_FULL']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('binarizer',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ['Hora_Dia', 'Dia_Semana',
+                                                   'Es_Fin_Semana',
+                                                   'Inicio_Cadena'])])),
+                ('feature-pre-processor', Nystroem()),
+                ('learner', HistGradientBoostingClassifier())])
+INFO:naiveautoml:Preventing evaluation of forbidden pipeline Pipeline(steps=[('impute_and_binarize',
+                 ColumnTransformer(transformers=[('num',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='median'))]),
+                                                  ['RetDays',
+                                                   'Volumen_Total_MB',
+                                                   'Num_Hilos',
+                                                   'Duracion_Sesion_Segundos',
+                                                   'Efecto_Canales',
+                                                   'Velocidad_MB_s',
+                                                   'Volumen_Acumulado_GB',
+                                                   'Nodo_Nodo2',
+                                                   'Aplicacion_APP12',
+                                                   'Aplicacion_APP3',
+                                                   'Aplicacion_APP4',
+                                                   'Aplicacion_APP...
+                                                   'ScheduleLabel_CUMULATIVO',
+                                                   'ScheduleLabel_DIFERENCIAL',
+                                                   'ScheduleLabel_FULL']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('binarizer',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ['Hora_Dia', 'Dia_Semana',
+                                                   'Es_Fin_Semana',
+                                                   'Inicio_Cadena'])])),
+                ('feature-pre-processor', Nystroem()),
+                ('learner', HistGradientBoostingClassifier())])
+2026-04-22 15:48:00,400 - naiveautoml - INFO - Observed score of nan for default configuration of sklearn.kernel_approximation.Nystroem
+2026-04-22 15:48:00,400 - naiveautoml - INFO - Observed score of nan for default configuration of sklearn.kernel_approximation.Nystroem
+INFO:naiveautoml:Observed score of nan for default configuration of sklearn.kernel_approximation.Nystroem
+ 88%|████████▊ | 28/32 [05:18<00:04,  1.11s/it]2026-04-22 15:48:00,406 - naiveautoml - INFO - Evaluating sklearn.decomposition._pca.PCA.Timeout: 300. Remaining time: 31.457345247268677
+2026-04-22 15:48:00,406 - naiveautoml - INFO - Evaluating sklearn.decomposition._pca.PCA.Timeout: 300. Remaining time: 31.457345247268677
+INFO:naiveautoml:Evaluating sklearn.decomposition._pca.PCA.Timeout: 300. Remaining time: 31.457345247268677
+2026-04-22 15:48:02,525 - naiveautoml - INFO - Observed score of 0.9966 for default configuration of sklearn.decomposition._pca.PCA
+2026-04-22 15:48:02,525 - naiveautoml - INFO - Observed score of 0.9966 for default configuration of sklearn.decomposition._pca.PCA
+INFO:naiveautoml:Observed score of 0.9966 for default configuration of sklearn.decomposition._pca.PCA
+2026-04-22 15:48:02,528 - naiveautoml - INFO - Evaluating sklearn.preprocessing._polynomial.PolynomialFeatures.Timeout: 300. Remaining time: 29.33515739440918
+2026-04-22 15:48:02,528 - naiveautoml - INFO - Evaluating sklearn.preprocessing._polynomial.PolynomialFeatures.Timeout: 300. Remaining time: 29.33515739440918
+INFO:naiveautoml:Evaluating sklearn.preprocessing._polynomial.PolynomialFeatures.Timeout: 300. Remaining time: 29.33515739440918
+2026-04-22 15:48:02,560 - naiveautoml - INFO - Preventing evaluation of forbidden pipeline Pipeline(steps=[('impute_and_binarize',
+                 ColumnTransformer(transformers=[('num',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='median'))]),
+                                                  ['RetDays',
+                                                   'Volumen_Total_MB',
+                                                   'Num_Hilos',
+                                                   'Duracion_Sesion_Segundos',
+                                                   'Efecto_Canales',
+                                                   'Velocidad_MB_s',
+                                                   'Volumen_Acumulado_GB',
+                                                   'Nodo_Nodo2',
+                                                   'Aplicacion_APP12',
+                                                   'Aplicacion_APP3',
+                                                   'Aplicacion_APP4',
+                                                   'Aplicacion_APP...
+                                                   'ScheduleLabel_CUMULATIVO',
+                                                   'ScheduleLabel_DIFERENCIAL',
+                                                   'ScheduleLabel_FULL']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('binarizer',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ['Hora_Dia', 'Dia_Semana',
+                                                   'Es_Fin_Semana',
+                                                   'Inicio_Cadena'])])),
+                ('feature-pre-processor', PolynomialFeatures()),
+                ('learner', HistGradientBoostingClassifier())])
+2026-04-22 15:48:02,560 - naiveautoml - INFO - Preventing evaluation of forbidden pipeline Pipeline(steps=[('impute_and_binarize',
+                 ColumnTransformer(transformers=[('num',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='median'))]),
+                                                  ['RetDays',
+                                                   'Volumen_Total_MB',
+                                                   'Num_Hilos',
+                                                   'Duracion_Sesion_Segundos',
+                                                   'Efecto_Canales',
+                                                   'Velocidad_MB_s',
+                                                   'Volumen_Acumulado_GB',
+                                                   'Nodo_Nodo2',
+                                                   'Aplicacion_APP12',
+                                                   'Aplicacion_APP3',
+                                                   'Aplicacion_APP4',
+                                                   'Aplicacion_APP...
+                                                   'ScheduleLabel_CUMULATIVO',
+                                                   'ScheduleLabel_DIFERENCIAL',
+                                                   'ScheduleLabel_FULL']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('binarizer',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ['Hora_Dia', 'Dia_Semana',
+                                                   'Es_Fin_Semana',
+                                                   'Inicio_Cadena'])])),
+                ('feature-pre-processor', PolynomialFeatures()),
+                ('learner', HistGradientBoostingClassifier())])
+INFO:naiveautoml:Preventing evaluation of forbidden pipeline Pipeline(steps=[('impute_and_binarize',
+                 ColumnTransformer(transformers=[('num',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='median'))]),
+                                                  ['RetDays',
+                                                   'Volumen_Total_MB',
+                                                   'Num_Hilos',
+                                                   'Duracion_Sesion_Segundos',
+                                                   'Efecto_Canales',
+                                                   'Velocidad_MB_s',
+                                                   'Volumen_Acumulado_GB',
+                                                   'Nodo_Nodo2',
+                                                   'Aplicacion_APP12',
+                                                   'Aplicacion_APP3',
+                                                   'Aplicacion_APP4',
+                                                   'Aplicacion_APP...
+                                                   'ScheduleLabel_CUMULATIVO',
+                                                   'ScheduleLabel_DIFERENCIAL',
+                                                   'ScheduleLabel_FULL']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('binarizer',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ['Hora_Dia', 'Dia_Semana',
+                                                   'Es_Fin_Semana',
+                                                   'Inicio_Cadena'])])),
+                ('feature-pre-processor', PolynomialFeatures()),
+                ('learner', HistGradientBoostingClassifier())])
+2026-04-22 15:48:02,586 - naiveautoml - INFO - Observed score of nan for default configuration of sklearn.preprocessing._polynomial.PolynomialFeatures
+2026-04-22 15:48:02,586 - naiveautoml - INFO - Observed score of nan for default configuration of sklearn.preprocessing._polynomial.PolynomialFeatures
+INFO:naiveautoml:Observed score of nan for default configuration of sklearn.preprocessing._polynomial.PolynomialFeatures
+ 94%|█████████▍| 30/32 [05:20<00:02,  1.10s/it]2026-04-22 15:48:02,591 - naiveautoml - INFO - Evaluating sklearn.feature_selection._univariate_selection.SelectPercentile.Timeout: 300. Remaining time: 29.27195405960083
+2026-04-22 15:48:02,591 - naiveautoml - INFO - Evaluating sklearn.feature_selection._univariate_selection.SelectPercentile.Timeout: 300. Remaining time: 29.27195405960083
+INFO:naiveautoml:Evaluating sklearn.feature_selection._univariate_selection.SelectPercentile.Timeout: 300. Remaining time: 29.27195405960083
+2026-04-22 15:48:03,173 - naiveautoml - INFO - Observed score of 0.9399 for default configuration of sklearn.feature_selection._univariate_selection.SelectPercentile
+2026-04-22 15:48:03,173 - naiveautoml - INFO - Observed score of 0.9399 for default configuration of sklearn.feature_selection._univariate_selection.SelectPercentile
+INFO:naiveautoml:Observed score of 0.9399 for default configuration of sklearn.feature_selection._univariate_selection.SelectPercentile
+ 97%|█████████▋| 31/32 [05:21<00:01,  1.01s/it]2026-04-22 15:48:03,179 - naiveautoml - INFO - Evaluating sklearn.feature_selection._univariate_selection.GenericUnivariateSelect.Timeout: 300. Remaining time: 28.684123516082764
+2026-04-22 15:48:03,179 - naiveautoml - INFO - Evaluating sklearn.feature_selection._univariate_selection.GenericUnivariateSelect.Timeout: 300. Remaining time: 28.684123516082764
+INFO:naiveautoml:Evaluating sklearn.feature_selection._univariate_selection.GenericUnivariateSelect.Timeout: 300. Remaining time: 28.684123516082764
+2026-04-22 15:48:03,687 - naiveautoml - INFO - Observed score of 0.8729 for default configuration of sklearn.feature_selection._univariate_selection.GenericUnivariateSelect
+2026-04-22 15:48:03,687 - naiveautoml - INFO - Observed score of 0.8729 for default configuration of sklearn.feature_selection._univariate_selection.GenericUnivariateSelect
+INFO:naiveautoml:Observed score of 0.8729 for default configuration of sklearn.feature_selection._univariate_selection.GenericUnivariateSelect
+100%|██████████| 32/32 [05:21<00:00,  1.11it/s]2026-04-22 15:48:03,693 - naiveautoml - INFO - Algorithm Selection ready.Decisions: 
+	('learner', 'sklearn.ensemble.HistGradientBoostingClassifier') with performance 0.9983
+2026-04-22 15:48:03,693 - naiveautoml - INFO - Algorithm Selection ready.Decisions: 
+	('learner', 'sklearn.ensemble.HistGradientBoostingClassifier') with performance 0.9983
+INFO:naiveautoml:Algorithm Selection ready.Decisions: 
+	('learner', 'sklearn.ensemble.HistGradientBoostingClassifier') with performance 0.9983
+100%|██████████| 32/32 [05:21<00:00, 10.06s/it]
+Progress for hyperparameter optimization:
+  0%|          | 0/100 [00:00<?, ?it/s]2026-04-22 15:48:03,714 - naiveautoml - INFO - --------------------------------------------------
+2026-04-22 15:48:03,714 - naiveautoml - INFO - --------------------------------------------------
+INFO:naiveautoml:--------------------------------------------------
+2026-04-22 15:48:03,716 - naiveautoml - INFO - Entering HPO phase.Remaining time: 38.15s
+2026-04-22 15:48:03,716 - naiveautoml - INFO - Entering HPO phase.Remaining time: 38.15s
+INFO:naiveautoml:Entering HPO phase.Remaining time: 38.15s
+2026-04-22 15:48:03,722 - naiveautoml - INFO - --------------------------------------------------
+2026-04-22 15:48:03,722 - naiveautoml - INFO - --------------------------------------------------
+INFO:naiveautoml:--------------------------------------------------
+2026-04-22 15:48:03,723 - naiveautoml - INFO - Starting 1-th HPO step. Currently best known score is -inf
+2026-04-22 15:48:03,723 - naiveautoml - INFO - Starting 1-th HPO step. Currently best known score is -inf
+INFO:naiveautoml:Starting 1-th HPO step. Currently best known score is -inf
+2026-04-22 15:48:04,123 - naiveautoml - INFO - Observed score of 0.9892 for params Configuration(values={
+  'learner:early_stop': 'valid',
+  'learner:l2_regularization': 0.0002629120983,
+  'learner:learning_rate': 0.9018107143831,
+  'learner:loss': 'log_loss',
+  'learner:max_bins': 255,
+  'learner:max_depth': 'None',
+  'learner:max_leaf_nodes': 465,
+  'learner:min_samples_leaf': 122,
+  'learner:scoring': 'loss',
+  'learner:tol': 1e-07,
+  'learner:n_iter_no_change': 20,
+  'learner:validation_fraction': 0.0870543285545,
+})
+2026-04-22 15:48:04,123 - naiveautoml - INFO - Observed score of 0.9892 for params Configuration(values={
+  'learner:early_stop': 'valid',
+  'learner:l2_regularization': 0.0002629120983,
+  'learner:learning_rate': 0.9018107143831,
+  'learner:loss': 'log_loss',
+  'learner:max_bins': 255,
+  'learner:max_depth': 'None',
+  'learner:max_leaf_nodes': 465,
+  'learner:min_samples_leaf': 122,
+  'learner:scoring': 'loss',
+  'learner:tol': 1e-07,
+  'learner:n_iter_no_change': 20,
+  'learner:validation_fraction': 0.0870543285545,
+})
+INFO:naiveautoml:Observed score of 0.9892 for params Configuration(values={
+  'learner:early_stop': 'valid',
+  'learner:l2_regularization': 0.0002629120983,
+  'learner:learning_rate': 0.9018107143831,
+  'learner:loss': 'log_loss',
+  'learner:max_bins': 255,
+  'learner:max_depth': 'None',
+  'learner:max_leaf_nodes': 465,
+  'learner:min_samples_leaf': 122,
+  'learner:scoring': 'loss',
+  'learner:tol': 1e-07,
+  'learner:n_iter_no_change': 20,
+  'learner:validation_fraction': 0.0870543285545,
+})
+2026-04-22 15:48:04,126 - naiveautoml - INFO - This is a NEW BEST SCORE!
+2026-04-22 15:48:04,126 - naiveautoml - INFO - This is a NEW BEST SCORE!
+INFO:naiveautoml:This is a NEW BEST SCORE!
+  1%|          | 1/100 [00:00<00:41,  2.40it/s]2026-04-22 15:48:04,133 - naiveautoml - INFO - Starting 2-th HPO step. Currently best known score is 0.9892
+2026-04-22 15:48:04,133 - naiveautoml - INFO - Starting 2-th HPO step. Currently best known score is 0.9892
+INFO:naiveautoml:Starting 2-th HPO step. Currently best known score is 0.9892
+2026-04-22 15:48:09,984 - naiveautoml - INFO - Observed score of 0.9961 for params Configuration(values={
+  'learner:early_stop': 'valid',
+  'learner:l2_regularization': 4.158e-09,
+  'learner:learning_rate': 0.0129903526785,
+  'learner:loss': 'log_loss',
+  'learner:max_bins': 255,
+  'learner:max_depth': 'None',
+  'learner:max_leaf_nodes': 1557,
+  'learner:min_samples_leaf': 18,
+  'learner:scoring': 'loss',
+  'learner:tol': 1e-07,
+  'learner:n_iter_no_change': 9,
+  'learner:validation_fraction': 0.3018153735742,
+})
+2026-04-22 15:48:09,984 - naiveautoml - INFO - Observed score of 0.9961 for params Configuration(values={
+  'learner:early_stop': 'valid',
+  'learner:l2_regularization': 4.158e-09,
+  'learner:learning_rate': 0.0129903526785,
+  'learner:loss': 'log_loss',
+  'learner:max_bins': 255,
+  'learner:max_depth': 'None',
+  'learner:max_leaf_nodes': 1557,
+  'learner:min_samples_leaf': 18,
+  'learner:scoring': 'loss',
+  'learner:tol': 1e-07,
+  'learner:n_iter_no_change': 9,
+  'learner:validation_fraction': 0.3018153735742,
+})
+INFO:naiveautoml:Observed score of 0.9961 for params Configuration(values={
+  'learner:early_stop': 'valid',
+  'learner:l2_regularization': 4.158e-09,
+  'learner:learning_rate': 0.0129903526785,
+  'learner:loss': 'log_loss',
+  'learner:max_bins': 255,
+  'learner:max_depth': 'None',
+  'learner:max_leaf_nodes': 1557,
+  'learner:min_samples_leaf': 18,
+  'learner:scoring': 'loss',
+  'learner:tol': 1e-07,
+  'learner:n_iter_no_change': 9,
+  'learner:validation_fraction': 0.3018153735742,
+})
+2026-04-22 15:48:09,989 - naiveautoml - INFO - This is a NEW BEST SCORE!
+2026-04-22 15:48:09,989 - naiveautoml - INFO - This is a NEW BEST SCORE!
+INFO:naiveautoml:This is a NEW BEST SCORE!
+  2%|▏         | 2/100 [00:06<05:54,  3.62s/it]2026-04-22 15:48:09,993 - naiveautoml - INFO - Starting 3-th HPO step. Currently best known score is 0.9961
+2026-04-22 15:48:09,993 - naiveautoml - INFO - Starting 3-th HPO step. Currently best known score is 0.9961
+INFO:naiveautoml:Starting 3-th HPO step. Currently best known score is 0.9961
+2026-04-22 15:48:10,888 - naiveautoml - INFO - Observed score of 0.9973 for params Configuration(values={
+  'learner:early_stop': 'valid',
+  'learner:l2_regularization': 0.0560098612853,
+  'learner:learning_rate': 0.1003725808916,
+  'learner:loss': 'log_loss',
+  'learner:max_bins': 255,
+  'learner:max_depth': 'None',
+  'learner:max_leaf_nodes': 143,
+  'learner:min_samples_leaf': 4,
+  'learner:scoring': 'loss',
+  'learner:tol': 1e-07,
+  'learner:n_iter_no_change': 11,
+  'learner:validation_fraction': 0.2754357740906,
+})
+2026-04-22 15:48:10,888 - naiveautoml - INFO - Observed score of 0.9973 for params Configuration(values={
+  'learner:early_stop': 'valid',
+  'learner:l2_regularization': 0.0560098612853,
+  'learner:learning_rate': 0.1003725808916,
+  'learner:loss': 'log_loss',
+  'learner:max_bins': 255,
+  'learner:max_depth': 'None',
+  'learner:max_leaf_nodes': 143,
+  'learner:min_samples_leaf': 4,
+  'learner:scoring': 'loss',
+  'learner:tol': 1e-07,
+  'learner:n_iter_no_change': 11,
+  'learner:validation_fraction': 0.2754357740906,
+})
+INFO:naiveautoml:Observed score of 0.9973 for params Configuration(values={
+  'learner:early_stop': 'valid',
+  'learner:l2_regularization': 0.0560098612853,
+  'learner:learning_rate': 0.1003725808916,
+  'learner:loss': 'log_loss',
+  'learner:max_bins': 255,
+  'learner:max_depth': 'None',
+  'learner:max_leaf_nodes': 143,
+  'learner:min_samples_leaf': 4,
+  'learner:scoring': 'loss',
+  'learner:tol': 1e-07,
+  'learner:n_iter_no_change': 11,
+  'learner:validation_fraction': 0.2754357740906,
+})
+2026-04-22 15:48:10,891 - naiveautoml - INFO - This is a NEW BEST SCORE!
+2026-04-22 15:48:10,891 - naiveautoml - INFO - This is a NEW BEST SCORE!
+INFO:naiveautoml:This is a NEW BEST SCORE!
+  3%|▎         | 3/100 [00:07<03:50,  2.38s/it]2026-04-22 15:48:10,897 - naiveautoml - INFO - Starting 4-th HPO step. Currently best known score is 0.9973
+2026-04-22 15:48:10,897 - naiveautoml - INFO - Starting 4-th HPO step. Currently best known score is 0.9973
+INFO:naiveautoml:Starting 4-th HPO step. Currently best known score is 0.9973
+2026-04-22 15:48:14,430 - naiveautoml - INFO - Observed score of 0.9945 for params Configuration(values={
+  'learner:early_stop': 'valid',
+  'learner:l2_regularization': 8.104e-10,
+  'learner:learning_rate': 0.0253990638873,
+  'learner:loss': 'log_loss',
+  'learner:max_bins': 255,
+  'learner:max_depth': 'None',
+  'learner:max_leaf_nodes': 58,
+  'learner:min_samples_leaf': 45,
+  'learner:scoring': 'loss',
+  'learner:tol': 1e-07,
+  'learner:n_iter_no_change': 20,
+  'learner:validation_fraction': 0.3902601940572,
+})
+2026-04-22 15:48:14,430 - naiveautoml - INFO - Observed score of 0.9945 for params Configuration(values={
+  'learner:early_stop': 'valid',
+  'learner:l2_regularization': 8.104e-10,
+  'learner:learning_rate': 0.0253990638873,
+  'learner:loss': 'log_loss',
+  'learner:max_bins': 255,
+  'learner:max_depth': 'None',
+  'learner:max_leaf_nodes': 58,
+  'learner:min_samples_leaf': 45,
+  'learner:scoring': 'loss',
+  'learner:tol': 1e-07,
+  'learner:n_iter_no_change': 20,
+  'learner:validation_fraction': 0.3902601940572,
+})
+INFO:naiveautoml:Observed score of 0.9945 for params Configuration(values={
+  'learner:early_stop': 'valid',
+  'learner:l2_regularization': 8.104e-10,
+  'learner:learning_rate': 0.0253990638873,
+  'learner:loss': 'log_loss',
+  'learner:max_bins': 255,
+  'learner:max_depth': 'None',
+  'learner:max_leaf_nodes': 58,
+  'learner:min_samples_leaf': 45,
+  'learner:scoring': 'loss',
+  'learner:tol': 1e-07,
+  'learner:n_iter_no_change': 20,
+  'learner:validation_fraction': 0.3902601940572,
+})
+  4%|▍         | 4/100 [00:10<04:32,  2.84s/it]2026-04-22 15:48:14,439 - naiveautoml - INFO - Starting 5-th HPO step. Currently best known score is 0.9973
+2026-04-22 15:48:14,439 - naiveautoml - INFO - Starting 5-th HPO step. Currently best known score is 0.9973
+INFO:naiveautoml:Starting 5-th HPO step. Currently best known score is 0.9973
+2026-04-22 15:48:19,007 - naiveautoml - INFO - Observed score of 0.9952 for params Configuration(values={
+  'learner:early_stop': 'off',
+  'learner:l2_regularization': 2.60133e-08,
+  'learner:learning_rate': 0.1028980215576,
+  'learner:loss': 'log_loss',
+  'learner:max_bins': 255,
+  'learner:max_depth': 'None',
+  'learner:max_leaf_nodes': 1483,
+  'learner:min_samples_leaf': 3,
+  'learner:scoring': 'loss',
+  'learner:tol': 1e-07,
+})
+2026-04-22 15:48:19,007 - naiveautoml - INFO - Observed score of 0.9952 for params Configuration(values={
+  'learner:early_stop': 'off',
+  'learner:l2_regularization': 2.60133e-08,
+  'learner:learning_rate': 0.1028980215576,
+  'learner:loss': 'log_loss',
+  'learner:max_bins': 255,
+  'learner:max_depth': 'None',
+  'learner:max_leaf_nodes': 1483,
+  'learner:min_samples_leaf': 3,
+  'learner:scoring': 'loss',
+  'learner:tol': 1e-07,
+})
+INFO:naiveautoml:Observed score of 0.9952 for params Configuration(values={
+  'learner:early_stop': 'off',
+  'learner:l2_regularization': 2.60133e-08,
+  'learner:learning_rate': 0.1028980215576,
+  'learner:loss': 'log_loss',
+  'learner:max_bins': 255,
+  'learner:max_depth': 'None',
+  'learner:max_leaf_nodes': 1483,
+  'learner:min_samples_leaf': 3,
+  'learner:scoring': 'loss',
+  'learner:tol': 1e-07,
+})
+  5%|▌         | 5/100 [00:15<05:29,  3.46s/it]2026-04-22 15:48:19,013 - naiveautoml - INFO - Starting 6-th HPO step. Currently best known score is 0.9973
+2026-04-22 15:48:19,013 - naiveautoml - INFO - Starting 6-th HPO step. Currently best known score is 0.9973
+INFO:naiveautoml:Starting 6-th HPO step. Currently best known score is 0.9973
+2026-04-22 15:48:20,881 - naiveautoml - INFO - Observed score of 0.998 for params Configuration(values={
+  'learner:early_stop': 'train',
+  'learner:l2_regularization': 3.11922e-07,
+  'learner:learning_rate': 0.2539166709992,
+  'learner:loss': 'log_loss',
+  'learner:max_bins': 255,
+  'learner:max_depth': 'None',
+  'learner:max_leaf_nodes': 6,
+  'learner:min_samples_leaf': 3,
+  'learner:scoring': 'loss',
+  'learner:tol': 1e-07,
+  'learner:n_iter_no_change': 6,
+})
+2026-04-22 15:48:20,881 - naiveautoml - INFO - Observed score of 0.998 for params Configuration(values={
+  'learner:early_stop': 'train',
+  'learner:l2_regularization': 3.11922e-07,
+  'learner:learning_rate': 0.2539166709992,
+  'learner:loss': 'log_loss',
+  'learner:max_bins': 255,
+  'learner:max_depth': 'None',
+  'learner:max_leaf_nodes': 6,
+  'learner:min_samples_leaf': 3,
+  'learner:scoring': 'loss',
+  'learner:tol': 1e-07,
+  'learner:n_iter_no_change': 6,
+})
+INFO:naiveautoml:Observed score of 0.998 for params Configuration(values={
+  'learner:early_stop': 'train',
+  'learner:l2_regularization': 3.11922e-07,
+  'learner:learning_rate': 0.2539166709992,
+  'learner:loss': 'log_loss',
+  'learner:max_bins': 255,
+  'learner:max_depth': 'None',
+  'learner:max_leaf_nodes': 6,
+  'learner:min_samples_leaf': 3,
+  'learner:scoring': 'loss',
+  'learner:tol': 1e-07,
+  'learner:n_iter_no_change': 6,
+})
+2026-04-22 15:48:20,885 - naiveautoml - INFO - This is a NEW BEST SCORE!
+2026-04-22 15:48:20,885 - naiveautoml - INFO - This is a NEW BEST SCORE!
+INFO:naiveautoml:This is a NEW BEST SCORE!
+  6%|▌         | 6/100 [00:17<04:34,  2.92s/it]2026-04-22 15:48:20,890 - naiveautoml - INFO - Starting 7-th HPO step. Currently best known score is 0.998
+2026-04-22 15:48:20,890 - naiveautoml - INFO - Starting 7-th HPO step. Currently best known score is 0.998
+INFO:naiveautoml:Starting 7-th HPO step. Currently best known score is 0.998
+2026-04-22 15:48:22,409 - naiveautoml - INFO - Observed score of 0.9942 for params Configuration(values={
+  'learner:early_stop': 'train',
+  'learner:l2_regularization': 3.0065637e-06,
+  'learner:learning_rate': 0.6805088361914,
+  'learner:loss': 'log_loss',
+  'learner:max_bins': 255,
+  'learner:max_depth': 'None',
+  'learner:max_leaf_nodes': 4,
+  'learner:min_samples_leaf': 20,
+  'learner:scoring': 'loss',
+  'learner:tol': 1e-07,
+  'learner:n_iter_no_change': 19,
+})
+2026-04-22 15:48:22,409 - naiveautoml - INFO - Observed score of 0.9942 for params Configuration(values={
+  'learner:early_stop': 'train',
+  'learner:l2_regularization': 3.0065637e-06,
+  'learner:learning_rate': 0.6805088361914,
+  'learner:loss': 'log_loss',
+  'learner:max_bins': 255,
+  'learner:max_depth': 'None',
+  'learner:max_leaf_nodes': 4,
+  'learner:min_samples_leaf': 20,
+  'learner:scoring': 'loss',
+  'learner:tol': 1e-07,
+  'learner:n_iter_no_change': 19,
+})
+INFO:naiveautoml:Observed score of 0.9942 for params Configuration(values={
+  'learner:early_stop': 'train',
+  'learner:l2_regularization': 3.0065637e-06,
+  'learner:learning_rate': 0.6805088361914,
+  'learner:loss': 'log_loss',
+  'learner:max_bins': 255,
+  'learner:max_depth': 'None',
+  'learner:max_leaf_nodes': 4,
+  'learner:min_samples_leaf': 20,
+  'learner:scoring': 'loss',
+  'learner:tol': 1e-07,
+  'learner:n_iter_no_change': 19,
+})
+  7%|▋         | 7/100 [00:18<03:49,  2.47s/it]2026-04-22 15:48:22,417 - naiveautoml - INFO - Starting 8-th HPO step. Currently best known score is 0.998
+2026-04-22 15:48:22,417 - naiveautoml - INFO - Starting 8-th HPO step. Currently best known score is 0.998
+INFO:naiveautoml:Starting 8-th HPO step. Currently best known score is 0.998
+2026-04-22 15:48:23,307 - naiveautoml - INFO - Observed score of 0.9983 for params Configuration(values={
+  'learner:early_stop': 'train',
+  'learner:l2_regularization': 3.92519e-08,
+  'learner:learning_rate': 0.43570901492,
+  'learner:loss': 'log_loss',
+  'learner:max_bins': 255,
+  'learner:max_depth': 'None',
+  'learner:max_leaf_nodes': 26,
+  'learner:min_samples_leaf': 5,
+  'learner:scoring': 'loss',
+  'learner:tol': 1e-07,
+  'learner:n_iter_no_change': 13,
+})
+2026-04-22 15:48:23,307 - naiveautoml - INFO - Observed score of 0.9983 for params Configuration(values={
+  'learner:early_stop': 'train',
+  'learner:l2_regularization': 3.92519e-08,
+  'learner:learning_rate': 0.43570901492,
+  'learner:loss': 'log_loss',
+  'learner:max_bins': 255,
+  'learner:max_depth': 'None',
+  'learner:max_leaf_nodes': 26,
+  'learner:min_samples_leaf': 5,
+  'learner:scoring': 'loss',
+  'learner:tol': 1e-07,
+  'learner:n_iter_no_change': 13,
+})
+INFO:naiveautoml:Observed score of 0.9983 for params Configuration(values={
+  'learner:early_stop': 'train',
+  'learner:l2_regularization': 3.92519e-08,
+  'learner:learning_rate': 0.43570901492,
+  'learner:loss': 'log_loss',
+  'learner:max_bins': 255,
+  'learner:max_depth': 'None',
+  'learner:max_leaf_nodes': 26,
+  'learner:min_samples_leaf': 5,
+  'learner:scoring': 'loss',
+  'learner:tol': 1e-07,
+  'learner:n_iter_no_change': 13,
+})
+2026-04-22 15:48:23,311 - naiveautoml - INFO - This is a NEW BEST SCORE!
+2026-04-22 15:48:23,311 - naiveautoml - INFO - This is a NEW BEST SCORE!
+INFO:naiveautoml:This is a NEW BEST SCORE!
+  8%|▊         | 8/100 [00:19<03:01,  1.97s/it]2026-04-22 15:48:23,316 - naiveautoml - INFO - Starting 9-th HPO step. Currently best known score is 0.9983
+2026-04-22 15:48:23,316 - naiveautoml - INFO - Starting 9-th HPO step. Currently best known score is 0.9983
+INFO:naiveautoml:Starting 9-th HPO step. Currently best known score is 0.9983
+2026-04-22 15:48:26,021 - naiveautoml - INFO - Observed score of 0.997 for params Configuration(values={
+  'learner:early_stop': 'train',
+  'learner:l2_regularization': 0.0008151859905,
+  'learner:learning_rate': 0.0259130335461,
+  'learner:loss': 'log_loss',
+  'learner:max_bins': 255,
+  'learner:max_depth': 'None',
+  'learner:max_leaf_nodes': 9,
+  'learner:min_samples_leaf': 52,
+  'learner:scoring': 'loss',
+  'learner:tol': 1e-07,
+  'learner:n_iter_no_change': 19,
+})
+2026-04-22 15:48:26,021 - naiveautoml - INFO - Observed score of 0.997 for params Configuration(values={
+  'learner:early_stop': 'train',
+  'learner:l2_regularization': 0.0008151859905,
+  'learner:learning_rate': 0.0259130335461,
+  'learner:loss': 'log_loss',
+  'learner:max_bins': 255,
+  'learner:max_depth': 'None',
+  'learner:max_leaf_nodes': 9,
+  'learner:min_samples_leaf': 52,
+  'learner:scoring': 'loss',
+  'learner:tol': 1e-07,
+  'learner:n_iter_no_change': 19,
+})
+INFO:naiveautoml:Observed score of 0.997 for params Configuration(values={
+  'learner:early_stop': 'train',
+  'learner:l2_regularization': 0.0008151859905,
+  'learner:learning_rate': 0.0259130335461,
+  'learner:loss': 'log_loss',
+  'learner:max_bins': 255,
+  'learner:max_depth': 'None',
+  'learner:max_leaf_nodes': 9,
+  'learner:min_samples_leaf': 52,
+  'learner:scoring': 'loss',
+  'learner:tol': 1e-07,
+  'learner:n_iter_no_change': 19,
+})
+  9%|▉         | 9/100 [00:22<03:20,  2.20s/it]2026-04-22 15:48:26,028 - naiveautoml - INFO - Starting 10-th HPO step. Currently best known score is 0.9983
+2026-04-22 15:48:26,028 - naiveautoml - INFO - Starting 10-th HPO step. Currently best known score is 0.9983
+INFO:naiveautoml:Starting 10-th HPO step. Currently best known score is 0.9983
+2026-04-22 15:48:28,852 - naiveautoml - INFO - Observed score of 0.9969 for params Configuration(values={
+  'learner:early_stop': 'off',
+  'learner:l2_regularization': 0.1146487731659,
+  'learner:learning_rate': 0.0255220416735,
+  'learner:loss': 'log_loss',
+  'learner:max_bins': 255,
+  'learner:max_depth': 'None',
+  'learner:max_leaf_nodes': 13,
+  'learner:min_samples_leaf': 12,
+  'learner:scoring': 'loss',
+  'learner:tol': 1e-07,
+})
+2026-04-22 15:48:28,852 - naiveautoml - INFO - Observed score of 0.9969 for params Configuration(values={
+  'learner:early_stop': 'off',
+  'learner:l2_regularization': 0.1146487731659,
+  'learner:learning_rate': 0.0255220416735,
+  'learner:loss': 'log_loss',
+  'learner:max_bins': 255,
+  'learner:max_depth': 'None',
+  'learner:max_leaf_nodes': 13,
+  'learner:min_samples_leaf': 12,
+  'learner:scoring': 'loss',
+  'learner:tol': 1e-07,
+})
+INFO:naiveautoml:Observed score of 0.9969 for params Configuration(values={
+  'learner:early_stop': 'off',
+  'learner:l2_regularization': 0.1146487731659,
+  'learner:learning_rate': 0.0255220416735,
+  'learner:loss': 'log_loss',
+  'learner:max_bins': 255,
+  'learner:max_depth': 'None',
+  'learner:max_leaf_nodes': 13,
+  'learner:min_samples_leaf': 12,
+  'learner:scoring': 'loss',
+  'learner:tol': 1e-07,
+})
+ 10%|█         | 10/100 [00:25<03:35,  2.40s/it]2026-04-22 15:48:28,861 - naiveautoml - INFO - Starting 11-th HPO step. Currently best known score is 0.9983
+2026-04-22 15:48:28,861 - naiveautoml - INFO - Starting 11-th HPO step. Currently best known score is 0.9983
+INFO:naiveautoml:Starting 11-th HPO step. Currently best known score is 0.9983
+2026-04-22 15:48:37,268 - naiveautoml - INFO - Observed score of 0.9978 for params Configuration(values={
+  'learner:early_stop': 'off',
+  'learner:l2_regularization': 5.0511845e-06,
+  'learner:learning_rate': 0.03036228879,
+  'learner:loss': 'log_loss',
+  'learner:max_bins': 255,
+  'learner:max_depth': 'None',
+  'learner:max_leaf_nodes': 348,
+  'learner:min_samples_leaf': 4,
+  'learner:scoring': 'loss',
+  'learner:tol': 1e-07,
+})
+2026-04-22 15:48:37,268 - naiveautoml - INFO - Observed score of 0.9978 for params Configuration(values={
+  'learner:early_stop': 'off',
+  'learner:l2_regularization': 5.0511845e-06,
+  'learner:learning_rate': 0.03036228879,
+  'learner:loss': 'log_loss',
+  'learner:max_bins': 255,
+  'learner:max_depth': 'None',
+  'learner:max_leaf_nodes': 348,
+  'learner:min_samples_leaf': 4,
+  'learner:scoring': 'loss',
+  'learner:tol': 1e-07,
+})
+INFO:naiveautoml:Observed score of 0.9978 for params Configuration(values={
+  'learner:early_stop': 'off',
+  'learner:l2_regularization': 5.0511845e-06,
+  'learner:learning_rate': 0.03036228879,
+  'learner:loss': 'log_loss',
+  'learner:max_bins': 255,
+  'learner:max_depth': 'None',
+  'learner:max_leaf_nodes': 348,
+  'learner:min_samples_leaf': 4,
+  'learner:scoring': 'loss',
+  'learner:tol': 1e-07,
+})
+ 11%|█         | 11/100 [00:33<06:17,  4.24s/it]2026-04-22 15:48:37,274 - naiveautoml - INFO - Next iteration would probably take more time than the deadline allows. Stopping HPO.
+2026-04-22 15:48:37,274 - naiveautoml - INFO - Next iteration would probably take more time than the deadline allows. Stopping HPO.
+INFO:naiveautoml:Next iteration would probably take more time than the deadline allows. Stopping HPO.
+2026-04-22 15:48:37,276 - naiveautoml - INFO - --------------------------------------------------
+2026-04-22 15:48:37,276 - naiveautoml - INFO - --------------------------------------------------
+INFO:naiveautoml:--------------------------------------------------
+2026-04-22 15:48:37,277 - naiveautoml - INFO - Search Completed. Building final pipeline.
+2026-04-22 15:48:37,277 - naiveautoml - INFO - Search Completed. Building final pipeline.
+INFO:naiveautoml:Search Completed. Building final pipeline.
+2026-04-22 15:48:37,278 - naiveautoml - INFO - --------------------------------------------------
+2026-04-22 15:48:37,278 - naiveautoml - INFO - --------------------------------------------------
+INFO:naiveautoml:--------------------------------------------------
+2026-04-22 15:48:37,280 - naiveautoml - INFO - Pipeline(steps=[('impute_and_binarize',
+                 ColumnTransformer(transformers=[('num',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='median'))]),
+                                                  ['RetDays',
+                                                   'Volumen_Total_MB',
+                                                   'Num_Hilos',
+                                                   'Duracion_Sesion_Segundos',
+                                                   'Efecto_Canales',
+                                                   'Velocidad_MB_s',
+                                                   'Volumen_Acumulado_GB',
+                                                   'Nodo_Nodo2',
+                                                   'Aplicacion_APP12',
+                                                   'Aplicacion_APP3',
+                                                   'Aplicacion_APP4',
+                                                   'Aplicacion_APP5',
+                                                   'Aplicacion_APP9',
+                                                   'ScheduleLabel_CUMULATIVO',
+                                                   'ScheduleLabel_DIFERENCIAL',
+                                                   'ScheduleLabel_FULL']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('binarizer',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ['Hora_Dia', 'Dia_Semana',
+                                                   'Es_Fin_Semana',
+                                                   'Inicio_Cadena'])])),
+                ('learner', HistGradientBoostingClassifier())])
+2026-04-22 15:48:37,280 - naiveautoml - INFO - Pipeline(steps=[('impute_and_binarize',
+                 ColumnTransformer(transformers=[('num',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='median'))]),
+                                                  ['RetDays',
+                                                   'Volumen_Total_MB',
+                                                   'Num_Hilos',
+                                                   'Duracion_Sesion_Segundos',
+                                                   'Efecto_Canales',
+                                                   'Velocidad_MB_s',
+                                                   'Volumen_Acumulado_GB',
+                                                   'Nodo_Nodo2',
+                                                   'Aplicacion_APP12',
+                                                   'Aplicacion_APP3',
+                                                   'Aplicacion_APP4',
+                                                   'Aplicacion_APP5',
+                                                   'Aplicacion_APP9',
+                                                   'ScheduleLabel_CUMULATIVO',
+                                                   'ScheduleLabel_DIFERENCIAL',
+                                                   'ScheduleLabel_FULL']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('binarizer',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ['Hora_Dia', 'Dia_Semana',
+                                                   'Es_Fin_Semana',
+                                                   'Inicio_Cadena'])])),
+                ('learner', HistGradientBoostingClassifier())])
+INFO:naiveautoml:Pipeline(steps=[('impute_and_binarize',
+                 ColumnTransformer(transformers=[('num',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='median'))]),
+                                                  ['RetDays',
+                                                   'Volumen_Total_MB',
+                                                   'Num_Hilos',
+                                                   'Duracion_Sesion_Segundos',
+                                                   'Efecto_Canales',
+                                                   'Velocidad_MB_s',
+                                                   'Volumen_Acumulado_GB',
+                                                   'Nodo_Nodo2',
+                                                   'Aplicacion_APP12',
+                                                   'Aplicacion_APP3',
+                                                   'Aplicacion_APP4',
+                                                   'Aplicacion_APP5',
+                                                   'Aplicacion_APP9',
+                                                   'ScheduleLabel_CUMULATIVO',
+                                                   'ScheduleLabel_DIFERENCIAL',
+                                                   'ScheduleLabel_FULL']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('binarizer',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ['Hora_Dia', 'Dia_Semana',
+                                                   'Es_Fin_Semana',
+                                                   'Inicio_Cadena'])])),
+                ('learner', HistGradientBoostingClassifier())])
+2026-04-22 15:48:37,338 - naiveautoml - INFO - Now fitting the pipeline with all given data.
+2026-04-22 15:48:37,338 - naiveautoml - INFO - Now fitting the pipeline with all given data.
+INFO:naiveautoml:Now fitting the pipeline with all given data.
+2026-04-22 15:48:37,696 - naiveautoml - INFO - Runtime was 355.833384513855 seconds
+2026-04-22 15:48:37,696 - naiveautoml - INFO - Runtime was 355.833384513855 seconds
+INFO:naiveautoml:Runtime was 355.833384513855 seconds
+
+==================================================
+--- MEJOR MODELO ENCONTRADO POR LA BÚSQUEDA ---
+==================================================
+Pipeline(steps=[('impute_and_binarize',
+                 ColumnTransformer(transformers=[('num',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='median'))]),
+                                                  ['RetDays',
+                                                   'Volumen_Total_MB',
+                                                   'Num_Hilos',
+                                                   'Duracion_Sesion_Segundos',
+                                                   'Efecto_Canales',
+                                                   'Velocidad_MB_s',
+                                                   'Volumen_Acumulado_GB',
+                                                   'Nodo_Nodo2',
+                                                   'Aplicacion_APP12',
+                                                   'Aplicacion_APP3',
+                                                   'Aplicacion_APP4',
+                                                   'Aplicacion_APP5',
+                                                   'Aplicacion_APP9',
+                                                   'ScheduleLabel_CUMULATIVO',
+                                                   'ScheduleLabel_DIFERENCIAL',
+                                                   'ScheduleLabel_FULL']),
+                                                 ('cat',
+                                                  Pipeline(steps=[('imputer',
+                                                                   SimpleImputer(strategy='most_frequent')),
+                                                                  ('binarizer',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ['Hora_Dia', 'Dia_Semana',
+                                                   'Es_Fin_Semana',
+                                                   'Inicio_Cadena'])])),
+                ('learner', HistGradientBoostingClassifier())])
+
+--- TABLA DE CLASIFICACIÓN (LEADERBOARD) ---
+    order          time   runtime  \
+0       2  1.776873e+09  1.022164   
+1      39  1.776873e+09  0.885942   
+2      37  1.776873e+09  1.862652   
+3      22  1.776873e+09  1.055600   
+4      42  1.776873e+09  8.399674   
+5       1  1.776873e+09  0.926186   
+6      34  1.776873e+09  0.889833   
+7      17  1.776873e+09  1.254690   
+8      40  1.776873e+09  2.700985   
+9      41  1.776873e+09  2.818043   
+10     28  1.776873e+09  2.114961   
+11     33  1.776873e+09  5.843878   
+12     36  1.776873e+09  4.563514   
+13     35  1.776873e+09  3.529410   
+14     38  1.776873e+09  1.514859   
+15      0  1.776873e+09  0.646313   
+16     32  1.776873e+09  0.393957   
+17     23  1.776873e+09  2.730283   
+18      8  1.776873e+09  0.271293   
+19      4  1.776873e+09  0.148016   
+20      7  1.776873e+09  0.231647   
+21     30  1.776873e+09  0.578789   
+22      6  1.776873e+09  0.202361   
+23      5  1.776873e+09  0.097740   
+24     13  1.776873e+09  1.208572   
+25     14  1.776873e+09  1.235810   
+26     31  1.776873e+09  0.504461   
+27      3  1.776873e+09  0.098926   
+28     10  1.776873e+09  0.610383   
+29     11  1.776873e+09  0.394021   
+30     12  1.776873e+09  0.437081   
+
+                                             pipeline  default_hp  roc_auc  \
+0   (ColumnTransformer(transformers=[('num',\n    ...        True   0.9983   
+1   (ColumnTransformer(transformers=[('num',\n    ...       False   0.9983   
+2   (ColumnTransformer(transformers=[('num',\n    ...       False   0.9980   
+3   (ColumnTransformer(transformers=[('num',\n    ...        True   0.9980   
+4   (ColumnTransformer(transformers=[('num',\n    ...       False   0.9978   
+5   (ColumnTransformer(transformers=[('num',\n    ...        True   0.9973   
+6   (ColumnTransformer(transformers=[('num',\n    ...       False   0.9973   
+7   (ColumnTransformer(transformers=[('num',\n    ...        True   0.9971   
+8   (ColumnTransformer(transformers=[('num',\n    ...       False   0.9970   
+9   (ColumnTransformer(transformers=[('num',\n    ...       False   0.9969   
+10  (ColumnTransformer(transformers=[('num',\n    ...        True   0.9966   
+11  (ColumnTransformer(transformers=[('num',\n    ...       False   0.9961   
+12  (ColumnTransformer(transformers=[('num',\n    ...       False   0.9952   
+13  (ColumnTransformer(transformers=[('num',\n    ...       False   0.9945   
+14  (ColumnTransformer(transformers=[('num',\n    ...       False   0.9942   
+15  (ColumnTransformer(transformers=[('num',\n    ...        True   0.9933   
+16  (ColumnTransformer(transformers=[('num',\n    ...       False   0.9892   
+17  (ColumnTransformer(transformers=[('num',\n    ...        True   0.9842   
+18  (ColumnTransformer(transformers=[('num',\n    ...        True   0.9796   
+19  (ColumnTransformer(transformers=[('num',\n    ...        True   0.9733   
+20  (ColumnTransformer(transformers=[('num',\n    ...        True   0.9620   
+21  (ColumnTransformer(transformers=[('num',\n    ...        True   0.9399   
+22  (ColumnTransformer(transformers=[('num',\n    ...        True   0.9352   
+23  (ColumnTransformer(transformers=[('num',\n    ...        True   0.9211   
+24  (ColumnTransformer(transformers=[('num',\n    ...        True   0.8929   
+25  (ColumnTransformer(transformers=[('num',\n    ...        True   0.8838   
+26  (ColumnTransformer(transformers=[('num',\n    ...        True   0.8729   
+27  (ColumnTransformer(transformers=[('num',\n    ...        True   0.8224   
+28  (ColumnTransformer(transformers=[('num',\n    ...        True   0.8072   
+29  (ColumnTransformer(transformers=[('num',\n    ...        True   0.6954   
+30  (ColumnTransformer(transformers=[('num',\n    ...        True   0.6724   
+
+    new_best                                  evaluation_report status  \
+0       True  {'roc_auc': [0.9970960082146066, 0.99793030419...     ok   
+1       True  {'roc_auc': [0.9988448209472468, 0.99868437941...     ok   
+2       True  {'roc_auc': [0.9982030548068285, 0.99889295340...     ok   
+3      False  {'roc_auc': [0.9987646001796945, 0.99584456424...     ok   
+4       True  {'roc_auc': [0.9957001668591965, 0.99939032216...     ok   
+5       True  {'roc_auc': [0.9958606083943011, 0.99760139905...     ok   
+6       True  {'roc_auc': [0.9965505069952509, 0.99732062636...     ok   
+7      False  {'roc_auc': [0.9981709664998075, 0.99675908099...     ok   
+8       True  {'roc_auc': [0.9938550892054936, 0.99764150943...     ok   
+9       True  {'roc_auc': [0.9988929534077782, 0.99789821589...     ok   
+10     False  {'roc_auc': [0.9948337825696316, 0.99852393787...     ok   
+11      True  {'roc_auc': [0.9948016942626108, 0.99714414067...     ok   
+12      True  {'roc_auc': [0.997737774355025, 0.992948594532...     ok   
+13      True  {'roc_auc': [0.9948979591836735, 0.99186561417...     ok   
+14      True  {'roc_auc': [0.993694647670389, 0.991384289564...     ok   
+15      True  {'roc_auc': [0.9926758439224745, 0.99641413169...     ok   
+16      True  {'roc_auc': [0.9888653574637403, 0.98679566166...     ok   
+17     False  {'roc_auc': [0.9654729816454884, 0.99744897959...     ok   
+18     False  {'roc_auc': [0.9874855602618406, 0.96688486715...     ok   
+19     False  {'roc_auc': [0.9734790142472083, 0.97160987036...     ok   
+20     False  {'roc_auc': [0.9597773071492749, 0.95746694904...     ok   
+21     False  {'roc_auc': [0.9448722885380567, 0.94837793608...     ok   
+22     False  {'roc_auc': [0.9441984340906174, 0.93300763701...     ok   
+23     False  {'roc_auc': [0.9137546528045181, 0.92590809908...     ok   
+24     False  {'roc_auc': [0.8909960210499295, 0.89155756642...     ok   
+25     False  {'roc_auc': [0.7825134770889488, 0.95318316005...     ok   
+26     False  {'roc_auc': [0.8512867411115389, 0.88644750352...     ok   
+27     False  {'roc_auc': [0.8255519188807598, 0.84563919907...     ok   
+28     False  {'roc_auc': [0.8038120908740856, 0.79631947118...     ok   
+29     False  {'roc_auc': [0.7044185598767809, 0.66413169041...     ok   
+30     False  {'roc_auc': [0.68105827236555, 0.6344179181106...     ok   
+
+   exception                           data-pre-processor_class  \
+0       None                                               None   
+1       None                                               None   
+2       None                                               None   
+3       None  sklearn.feature_selection._variance_threshold....   
+4       None                                               None   
+5       None                                               None   
+6       None                                               None   
+7       None             sklearn.preprocessing._data.Normalizer   
+8       None                                               None   
+9       None                                               None   
+10      None                                               None   
+11      None                                               None   
+12      None                                               None   
+13      None                                               None   
+14      None                                               None   
+15      None                                               None   
+16      None                                               None   
+17      None                                               None   
+18      None                                               None   
+19      None                                               None   
+20      None                                               None   
+21      None                                               None   
+22      None                                               None   
+23      None                                               None   
+24      None                                               None   
+25      None                                               None   
+26      None                                               None   
+27      None                                               None   
+28      None                                               None   
+29      None                                               None   
+30      None                                               None   
+
+   data-pre-processor_hps                        feature-pre-processor_class  \
+0                    None                                               None   
+1                    None                                               None   
+2                    None                                               None   
+3                    None                                               None   
+4                    None                                               None   
+5                    None                                               None   
+6                    None                                               None   
+7                    None                                               None   
+8                    None                                               None   
+9                    None                                               None   
+10                   None                     sklearn.decomposition._pca.PCA   
+11                   None                                               None   
+12                   None                                               None   
+13                   None                                               None   
+14                   None                                               None   
+15                   None                                               None   
+16                   None                                               None   
+17                   None             sklearn.decomposition._fastica.FastICA   
+18                   None                                               None   
+19                   None                                               None   
+20                   None                                               None   
+21                   None  sklearn.feature_selection._univariate_selectio...   
+22                   None                                               None   
+23                   None                                               None   
+24                   None                                               None   
+25                   None                                               None   
+26                   None  sklearn.feature_selection._univariate_selectio...   
+27                   None                                               None   
+28                   None                                               None   
+29                   None                                               None   
+30                   None                                               None   
+
+   feature-pre-processor_hps  \
+0                       None   
+1                       None   
+2                       None   
+3                       None   
+4                       None   
+5                       None   
+6                       None   
+7                       None   
+8                       None   
+9                       None   
+10                      None   
+11                      None   
+12                      None   
+13                      None   
+14                      None   
+15                      None   
+16                      None   
+17                      None   
+18                      None   
+19                      None   
+20                      None   
+21                      None   
+22                      None   
+23                      None   
+24                      None   
+25                      None   
+26                      None   
+27                      None   
+28                      None   
+29                      None   
+30                      None   
+
+                                        learner_class  \
+0     sklearn.ensemble.HistGradientBoostingClassifier   
+1     sklearn.ensemble.HistGradientBoostingClassifier   
+2     sklearn.ensemble.HistGradientBoostingClassifier   
+3     sklearn.ensemble.HistGradientBoostingClassifier   
+4     sklearn.ensemble.HistGradientBoostingClassifier   
+5     sklearn.ensemble._forest.RandomForestClassifier   
+6     sklearn.ensemble.HistGradientBoostingClassifier   
+7     sklearn.ensemble.HistGradientBoostingClassifier   
+8     sklearn.ensemble.HistGradientBoostingClassifier   
+9     sklearn.ensemble.HistGradientBoostingClassifier   
+10    sklearn.ensemble.HistGradientBoostingClassifier   
+11    sklearn.ensemble.HistGradientBoostingClassifier   
+12    sklearn.ensemble.HistGradientBoostingClassifier   
+13    sklearn.ensemble.HistGradientBoostingClassifier   
+14    sklearn.ensemble.HistGradientBoostingClassifier   
+15      sklearn.ensemble._forest.ExtraTreesClassifier   
+16    sklearn.ensemble.HistGradientBoostingClassifier   
+17    sklearn.ensemble.HistGradientBoostingClassifier   
+18  sklearn.discriminant_analysis.QuadraticDiscrim...   
+19       sklearn.tree._classes.DecisionTreeClassifier   
+20  sklearn.discriminant_analysis.LinearDiscrimina...   
+21    sklearn.ensemble.HistGradientBoostingClassifier   
+22  sklearn.neighbors._classification.KNeighborsCl...   
+23                     sklearn.naive_bayes.GaussianNB   
+24            sklearn.linear_model.LogisticRegression   
+25  sklearn.neural_network._multilayer_perceptron....   
+26    sklearn.ensemble.HistGradientBoostingClassifier   
+27                    sklearn.naive_bayes.BernoulliNB   
+28                           sklearn.svm._classes.SVC   
+29                           sklearn.svm._classes.SVC   
+30                           sklearn.svm._classes.SVC   
+
+                                          learner_hps  
+0                                                None  
+1   {'early_stop': 'train', 'l2_regularization': 3...  
+2   {'early_stop': 'train', 'l2_regularization': 3...  
+3                                                None  
+4   {'early_stop': 'off', 'l2_regularization': 5.0...  
+5                                                None  
+6   {'early_stop': 'valid', 'l2_regularization': 0...  
+7                                                None  
+8   {'early_stop': 'train', 'l2_regularization': 0...  
+9   {'early_stop': 'off', 'l2_regularization': 0.1...  
+10                                               None  
+11  {'early_stop': 'valid', 'l2_regularization': 4...  
+12  {'early_stop': 'off', 'l2_regularization': 2.6...  
+13  {'early_stop': 'valid', 'l2_regularization': 8...  
+14  {'early_stop': 'train', 'l2_regularization': 3...  
+15                                               None  
+16  {'early_stop': 'valid', 'l2_regularization': 0...  
+17                                               None  
+18                                               None  
+19                                               None  
+20                                               None  
+21                                               None  
+22                                               None  
+23                                               None  
+24                                               None  
+25                                               None  
+26                                               None  
+27                                               None  
+28                                               None  
+29                                               None  
+30                                               None  
+
+No se pudo generar la gráfica de historial: string indices must be integers, not 'str'
