@@ -1,9 +1,7 @@
 # backup-resilience-framework
-#English Description
-Governance and Applied Analytics Framework for Backup Management in Legacy Financial Infrastructures, Aligned with DORA. Master's Degree Project, Universidad de La Sabana, 2026.
+#Governance and Applied Analytics Framework for Backup Management in Legacy Financial Infrastructures, Aligned with DORA. Master's Degree Project, Universidad de La Sabana, 2026.
 
-#Descripcion en español
-Framework de gobierno y analítica aplicada para la gestión de copias de seguridad en infraestructuras legadas del sector financiero, alineado con DORA. Trabajo de Grado, Universidad de La Sabana, 2026
+#Framework de gobierno y analítica aplicada para la gestión de copias de seguridad en infraestructuras legadas del sector financiero, alineado con DORA. Trabajo de Grado, Universidad de La Sabana, 2026
 # Trabajo de Grado — Framework de Resiliencia Digital para Copias de Seguridad
 
 **Autor:** Elkin Lopez  
