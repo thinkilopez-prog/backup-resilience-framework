@@ -20,11 +20,13 @@ Repositorio de código abierto que acompaña el trabajo de grado titulado:
 Los artefactos digitales aquí publicados garantizan la reproducibilidad
 integral del ejercicio analítico desarrollado en el cuerpo del documento.
 
-## Estructura
+##Contenido del repositorio
+Todos los archivos del material complementario se encuentran en la raíz del repositorio:
 
-- **`01_Codigo/`** — Cuadernos analíticos reproducibles (R y Python)
-- **`02_Datos/`** — Conjuntos de datos anonimizados de insumo
-- **`03_Resultados/`** — Salidas auxiliares del proceso analítico
+*Cuadernos analíticos (.ipynb)
+*Conjuntos de datos anonimizados (.csv, .xlsx)
+*Calculadora interactiva (calculadora_ahp.html)
+*Salida de selección automática (resultado-naiveautoML-best.txt)
 
 ## Orden de ejecución recomendado
 
