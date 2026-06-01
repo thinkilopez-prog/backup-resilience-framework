@@ -33,7 +33,7 @@ Todos los archivos del material complementario se encuentran en la raíz del rep
 1. `Naive_autoML.ipynb` — Selección automática del clasificador
 2. `Modelo_ML_Clasificacion_SLA_v4.ipynb` — Entrenamiento y evaluación
 3. `Simulacion_Montecarlo_Calibrado_v3.ipynb` — Calibración, simulación y caso financiero
-4. `Calculadora_AHP.html` — Herramienta interactiva de priorización
+4. `calculadora_ahp.html` — Herramienta interactiva de priorización
 
 ## Requisitos
 
